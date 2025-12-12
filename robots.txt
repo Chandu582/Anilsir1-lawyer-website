@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chandu582.github.io/Anilsir1-lawyer-website/sitemap.xml
+Host: https://chandu582.github.io/Anilsir1-lawyer-website/
