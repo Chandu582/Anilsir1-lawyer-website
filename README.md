@@ -1,0 +1,16 @@
+# Advocate Anil Kumar Purushotam – Official Website
+
+This is the official portfolio website of **Advocate Anil Kumar Purushotam**,  
+based in **Chandi, Nalanda, Bihar**.  
+The website showcases his legal services, experience, and contact information.
+
+🔗 Live Website:  
+https://chandu582.github.io/Anilsir1-lawyer-website/
+
+📌 Optimized for Search Engines (SEO) with:
+- Meta tags  
+- Open Graph tags  
+- JSON-LD Schema  
+- Sitemap  
+- robots.txt  
+- Mobile-friendly responsive layout
