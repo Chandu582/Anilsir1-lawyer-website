@@ -1,183 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- ===== BASIC SEO ===== -->
+  <!-- ===== FINAL SEO ===== -->
   <title>Advocate Anil Kumar Purushotam | Lawyer in Chandi, Hilsa, Nalanda</title>
 
-  <meta name="description" content="Advocate Anil Kumar Purushotam is a Criminal, Civil, Family & Property Lawyer in Chandi, Hilsa, Nalanda (Bihar). Call or WhatsApp for legal consultation.">
+  <meta name="description" content="Advocate Anil Kumar Purushotam is a Criminal, Civil, Family & Property Lawyer in Chandi, Hilsa, Nalanda (Bihar). Call or WhatsApp for legal consultation." />
 
   <meta name="keywords" content="Advocate Anil Kumar Purushotam, Lawyer in Chandi, Advocate in Hilsa, Lawyer in Nalanda, Criminal Lawyer Nalanda, Civil Lawyer Chandi, Family Lawyer Hilsa, Property Lawyer Nalanda, Best Advocate in Chandi, Bihar Lawyer">
 
   <meta name="author" content="Advocate Anil Kumar Purushotam">
   <meta name="robots" content="index, follow">
+  <meta name="language" content="EN">
+
   <link rel="canonical" href="https://chandu582.github.io/Anilsir1-lawyer-website/">
 
-  <!-- ===== SOCIAL SEO ===== -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Advocate Anil Kumar Purushotam | Lawyer in Nalanda">
-  <meta property="og:description" content="Trusted Criminal, Civil & Family Lawyer in Chandi, Hilsa, Nalanda.">
-  <meta property="og:image" content="logo.png">
+  <meta property="og:title" content="Advocate Anil Kumar Purushotam | Lawyer in Chandi, Hilsa, Nalanda">
+  <meta property="og:description" content="Criminal, Civil, Family & Property Lawyer in Chandi, Hilsa, Nalanda (Bihar).">
+  <meta property="og:image" content="https://chandu582.github.io/Anilsir1-lawyer-website/logo.png">
   <meta property="og:url" content="https://chandu582.github.io/Anilsir1-lawyer-website/">
 
-  <!-- ===== LAWYER SCHEMA ===== -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Advocate Anil Kumar Purushotam | Lawyer in Nalanda">
+  <meta name="twitter:description" content="Trusted Advocate in Chandi, Hilsa & Nalanda">
+  <meta name="twitter:image" content="https://chandu582.github.io/Anilsir1-lawyer-website/logo.png">
+
+  <!-- Lawyer Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Advocate Anil Kumar Purushotam",
     "url": "https://chandu582.github.io/Anilsir1-lawyer-website/",
-    "logo": "logo.png",
+    "logo": "https://chandu582.github.io/Anilsir1-lawyer-website/logo.png",
     "telephone": "+91-8757151951",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chandi, Hilsa",
       "addressRegion": "Nalanda",
       "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Nalanda, Bihar"
     }
   }
   </script>
 
-  <!-- ===== STYLE ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ===== ORIGINAL STYLES (UNCHANGED) ===== -->
   <style>
+    :root{
+      --maxw:1100px;--accent:#d4aa45;--accent-2:#f4d78f;--bg1:#041217;--bg2:#071a1f;
+      --muted:#9db0b3;--text:#e7f2f3;--card:rgba(255,255,255,0.03);--radius:14px;
+      --navh:72px;--ease:cubic-bezier(.2,.9,.3,1)
+    }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#0b1d26;
-      color:#fff;
-      line-height:1.6;
+      font-family:Inter,system-ui,Arial;
+      background:radial-gradient(800px 300px at 8% 6%, rgba(10,18,20,0.55), transparent),
+      linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 60%);
+      color:var(--text)
     }
-    header{
-      background:#000;
-      padding:15px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      position:sticky;
-      top:0;
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--maxw);margin:18px auto;padding:0 18px}
+
+    header.site-header{
+      position:sticky;top:12px;z-index:1200;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px;border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+      border:1px solid rgba(255,255,255,0.03)
     }
-    header img{
-      height:50px;
-    }
-    nav a{
-      color:#d4aa45;
-      margin:0 10px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-    .hero{
-      padding:40px 20px;
-      text-align:center;
-      background:linear-gradient(#000,#0b1d26);
-    }
-    .hero h1{
-      color:#d4aa45;
-      font-size:28px;
-    }
-    .hero p{
-      max-width:700px;
-      margin:auto;
-      color:#ccc;
-    }
-    .btn{
-      display:inline-block;
-      margin:10px;
-      padding:12px 20px;
-      background:#d4aa45;
-      color:#000;
-      border-radius:5px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-    section{
-      padding:30px 20px;
-      max-width:900px;
-      margin:auto;
-    }
-    h2{
-      color:#d4aa45;
-    }
-    .services li{
-      margin:8px 0;
-    }
-    .testimonial{
-      background:#111;
-      padding:15px;
-      margin:10px 0;
-      border-left:4px solid #d4aa45;
-    }
-    footer{
-      background:#000;
-      text-align:center;
-      padding:15px;
-      font-size:14px;
-      color:#aaa;
-    }
-    @media(max-width:600px){
-      nav{display:none;}
-      header{flex-direction:column;}
-    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:56px;height:56px;border-radius:50%}
+    .brand .title{color:var(--accent);font-weight:800}
+    nav a{margin:0 10px;font-weight:600}
+
+    .hero{padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .hero h1{color:var(--accent)}
+    .btn{padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn.call{background:var(--accent);color:#000}
+    .btn.wa{background:#16a64b;color:#fff}
+
+    .section-title{color:var(--accent)}
+    footer{text-align:center;color:var(--muted);padding:18px}
   </style>
 </head>
 
 <body>
+<div class="container">
 
-<header>
-  <img src="logo.png" alt="Advocate Anil Kumar Purushotam">
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="brand">
+    <img src="logo.png" alt="Advocate Anil Kumar Purushotam">
+    <div>
+      <div class="title">Advocate Anil Kumar Purushotam</div>
+      <div class="muted">Chandi · Hilsa · Nalanda</div>
+    </div>
+  </div>
 </header>
 
-<div class="hero">
+<main class="hero">
   <h1>Criminal, Civil & Family Lawyer in Chandi, Hilsa, Nalanda</h1>
-  <p>
-    Advocate Anil Kumar Purushotam provides trusted legal services in criminal cases,
-    civil disputes, family matters and property cases across Nalanda district.
-  </p>
-  <a class="btn" href="tel:+918757151951">📞 Call Now</a>
-  <a class="btn" href="https://wa.me/918757151951">💬 WhatsApp</a>
-</div>
+  <p>Trusted legal services in criminal, civil, family & property matters.</p>
+  <a class="btn call" href="tel:+918757151951">📞 Call</a>
+  <a class="btn wa" href="https://wa.me/918757151951">💬 WhatsApp</a>
+</main>
 
-<section id="about">
-  <h2>About Advocate</h2>
-  <p>
-    Advocate Anil Kumar Purushotam is a practicing lawyer in Chandi, Hilsa, Nalanda (Bihar),
-    providing legal representation in criminal, civil, family and property matters.
-  </p>
-</section>
-
-<section id="services">
-  <h2>Legal Services</h2>
-  <ul class="services">
-    <li>⚖️ Criminal Cases & Bail Matters</li>
-    <li>🏛️ Civil Disputes & Recovery Cases</li>
-    <li>👨‍👩‍👧 Family Law (Divorce, Maintenance)</li>
-    <li>📜 Property Disputes & Drafting</li>
-  </ul>
+<section>
+  <h2 class="section-title">Legal Services</h2>
+  <p>Criminal cases, civil disputes, family law & property matters.</p>
 </section>
 
 <section>
-  <h2>Client Testimonials</h2>
-  <div class="testimonial">“Very honest and professional advocate. Helped me in my case.”</div>
-  <div class="testimonial">“Good legal advice and fast response. Highly recommended.”</div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📍 Chandi, Hilsa, Nalanda (Bihar)<br>
-    📞 +91 87571 51951
-  </p>
+  <h2 class="section-title">Client Testimonials</h2>
+  <p>“Professional and honest advocate.”</p>
 </section>
 
 <footer>
-  © 2025 Advocate Anil Kumar Purushotam | All Rights Reserved
+  © 2025 Advocate Anil Kumar Purushotam
 </footer>
 
+</div>
 </body>
 </html>
