@@ -3,106 +3,194 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Advocate Anil Kumar Purushotam — Trusted Lawyer in Nalanda, Bihar</title>
-  <meta name="description" content="Advocate Anil Kumar Purushotam — Criminal, Civil, Family & Property lawyer in Chandi, Hilsa (Nalanda). Fast, honest and professional legal support." />
-  <meta name="robots" content="index, follow" />
-  <!-- Google site verification (you provided earlier) -->
-  <meta name="google-site-verification" content="yviEMCfbDNnpRotIoF1sNneRYaqpMizip-rFN4xWZeM" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Advocate Anil Kumar Purushotam — Trusted Lawyer in Nalanda" />
-  <meta property="og:description" content="Criminal, Civil, Family & Property lawyer in Chandi, Hilsa (Nalanda). Contact: +91 87571 51951" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://chandu582.github.io/Anilsir1-lawyer-website/" />
-  <meta property="og:image" content="https://chandu582.github.io/Anilsir1-lawyer-website/logo.png" />
-  <link rel="canonical" href="https://chandu582.github.io/Anilsir1-lawyer-website/" />
+  <title>Advocate Anil Kumar Purushotam — Trusted Legal Services in Nalanda, Bihar</title>
 
-  <!-- Structured data (LocalBusiness) -->
+  <!-- SEO meta -->
+  <meta name="description" content="Advocate Anil Kumar Purushotam — Criminal, Civil, Family & Property law expert in Chandi, Hilsa, Nalanda. Fast, honest legal representation." />
+  <meta name="keywords" content="Advocate, Lawyer, Nalanda, Chandi, Hilsa, Criminal Lawyer, Civil Lawyer, Family Lawyer, Property Lawyer" />
+  <!-- Google site verification (if you used HTML tag method) -->
+  <meta name="google-site-verification" content="yviEMCfbDNnpRotIoF1sNneRYaqpMizip-rFN4xWZeM" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Advocate Anil Kumar Purushotam — Trusted Legal Services (Nalanda, Bihar)" />
+  <meta property="og:description" content="Criminal, Civil, Family & Property law specialist in Chandi • Hilsa • Nalanda. Contact for consultation & representation." />
+  <meta property="og:image" content="social.png" />
+  <meta property="og:url" content="https://chandu582.github.io/Anilsir1-lawyer-website/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.png" />
+
+  <!-- Basic styling (single-file) -->
+  <style>
+    :root{
+      --bg1:#081019;       /* deep navy */
+      --bg2:#0f1724;       /* darker gradient */
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --gold:#d4af37;      /* royal gold */
+      --accent:#ffd88f;    /* soft gold */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(212,175,55,0.06), transparent 10%),
+                  linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:24px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .brand img{
+      width:62px;height:62px;border-radius:12px;object-fit:cover;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6), inset 0 -2px 6px rgba(0,0,0,0.3);
+      background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.14));
+    }
+    .brand h1{
+      margin:0;font-size:18px;line-height:1.05;color:var(--gold);
+      font-weight:700;
+    }
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .cta{
+      display:flex;gap:10px;align-items:center;
+    }
+    .btn{
+      background:linear-gradient(180deg,var(--accent),var(--gold));
+      color:#04202b;padding:10px 16px;border-radius:12px;font-weight:700;
+      box-shadow: 0 6px 18px rgba(212,175,55,0.12);
+      text-decoration:none;
+    }
+    .btn.wa{
+      background:linear-gradient(180deg,#3bd05b,#26a83a);
+      color:white;
+    }
+
+    /* hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:18px;
+      align-items:start;
+      margin-top:12px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: 0 10px 30px rgba(2,6,12,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+
+    .headline{
+      font-size: clamp(20px, 5vw, 42px);
+      font-weight:800;
+      color:var(--gold);
+      margin:0 0 10px;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+    .sub{color:var(--muted);margin-bottom:16px;font-size:15px}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+    .quick{
+      background:var(--card);
+      border-radius:12px;padding:14px;
+      display:flex;flex-direction:column;gap:8px;
+      color:var(--muted)
+    }
+    .quick small{color:var(--muted);font-size:13px}
+
+    /* services */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .service{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      padding:14px;border-radius:12px;
+      display:flex;gap:12px;align-items:center;
+    }
+    .service .ico{
+      width:46px;height:46px;border-radius:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.14));
+      display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold);
+    }
+    .service h4{margin:0;font-size:15px}
+    .service p{margin:0;color:var(--muted);font-size:13px}
+
+    /* about / contact */
+    footer{margin-top:26px;color:var(--muted);font-size:14px}
+    .contact-form{display:flex;flex-direction:column;gap:10px}
+    input, textarea{
+      background:transparent;border:1px solid rgba(255,255,255,0.04);
+      color:#dfeaf2;padding:12px;border-radius:10px;
+    }
+    input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.18)}
+    .submit{background:var(--gold);color:#061018;padding:12px;border-radius:10px;border:none;font-weight:700}
+
+    /* small screens */
+    @media (max-width:760px){
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      nav{order:3}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- Structured data (JSON-LD) for local business -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"LegalService",
     "name":"Advocate Anil Kumar Purushotam",
     "image":"https://chandu582.github.io/Anilsir1-lawyer-website/logo.png",
+    "description":"Criminal, Civil, Family & Property law specialist in Chandi, Hilsa, Nalanda (Bihar).",
     "telephone":"+918757151951",
     "address":{
       "@type":"PostalAddress",
-      "addressLocality":"Chandi, Hilsa",
-      "addressRegion":"Nalanda, Bihar",
+      "addressLocality":"Chandi",
+      "addressRegion":"Nalanda",
       "addressCountry":"IN"
     },
-    "url":"https://chandu582.github.io/Anilsir1-lawyer-website/",
-    "priceRange":"₹₹",
-    "description":"Criminal, Civil, Family & Property lawyer serving Nalanda district. Fast and honest legal support."
+    "areaServed":"Nalanda, Bihar",
+    "url":"https://chandu582.github.io/Anilsir1-lawyer-website/"
   }
   </script>
-
-  <!-- STYLES: dark gradient + royal gold accent -->
-  <style>
-    :root{
-      --bg1:#07121a;
-      --bg2:#0b1b25;
-      --card:#0f1b22;
-      --gold:#e0b24a;
-      --muted:#9aa6ab;
-      --accent:#ffd66a;
-      --btn-g:#22c55e;
-      --maxw:1100px;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:26px;}
-    header{display:flex;align-items:center;justify-content:space-between;gap:18px;}
-    .brand{display:flex;align-items:center;gap:14px;}
-    .brand img{height:56px;width:56px;object-fit:contain;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.6);}
-    .site-title{color:var(--gold);font-weight:700;font-size:20px;line-height:1;}
-    nav{display:flex;gap:18px;align-items:center;}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;}
-    .cta{background:var(--accent);color:#0b1b25;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.35);}
-
-    /* HERO */
-    .hero{margin-top:36px;display:grid;grid-template-columns:1fr;gap:22px;}
-    h1{font-size:44px;margin:0;color:var(--gold);line-height:1.05;font-weight:800;text-shadow:0 6px 20px rgba(0,0,0,.6);}
-    p.lead{color:var(--muted);margin:10px 0 0;font-size:16px}
-
-    .hero-actions{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap;}
-    .btn{border-radius:10px;padding:12px 18px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:10px;box-shadow:0 6px 18px rgba(0,0,0,.45);}
-    .btn-call{background:linear-gradient(#f2c46b,#e3ae3a);color:#102021;}
-    .btn-wa{background:var(--btn-g);color:#fff;}
-    .btn-mail{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--muted);}
-
-    /* card */
-    .card{background:rgba(12,20,26,.6);border-radius:12px;padding:18px;margin-top:18px;box-shadow:0 8px 30px rgba(2,8,12,.6);border:1px solid rgba(255,255,255,.02)}
-    .card h3{color:var(--gold);margin:0;font-size:20px}
-    .contact-line{color:var(--muted);margin-top:8px}
-
-    /* services */
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:26px}
-    .service{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:10px;}
-    .service h4{margin:0;color:#fff;font-size:16px}
-    .service p{color:var(--muted);margin:6px 0 0}
-
-    footer{margin-top:40px;color:var(--muted);font-size:13px;padding-bottom:40px}
-
-    /* responsive */
-    @media(min-width:900px){
-      .hero{grid-template-columns:1fr 420px;align-items:start}
-      h1{font-size:54px}
-    }
-    @media(max-width:520px){
-      .site-title{font-size:16px}
-      h1{font-size:36px}
-    }
-  </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">
-        <!-- LOGO: file must exist in repo as logo.png (lowercase) -->
-        <img src="logo.png" alt="Advocate Anil Kumar Purushotam Logo" onerror="this.style.display='none'">
+        <!-- logo.png must be in repo root -->
+        <img src="logo.png" alt="Advocate Anil Kumar Purushotam" onerror="this.style.display='none'">
         <div>
-          <div class="site-title">Advocate Anil<br/>Kumar Purushotam</div>
-          <div style="color:var(--muted);font-weight:600;font-size:13px;margin-top:2px">Chandi • Hilsa • Nalanda</div>
+          <h1>Advocate Anil Kumar Purushotam</h1>
+          <p>Chandi · Hilsa · Nalanda — Criminal • Civil • Family • Property</p>
         </div>
       </div>
 
@@ -110,114 +198,130 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a class="cta" href="tel:+918757151951">Call Now</a>
+        <div class="cta">
+          <a class="btn" href="tel:+918757151951">Call Now</a>
+          <a class="btn wa" href="https://wa.me/918757151951" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
       </nav>
     </header>
 
-    <!-- HERO & RIGHT CARD -->
+    <!-- HERO -->
     <section class="hero">
+      <div class="card">
+        <h2 class="headline">Premium Legal Services in Chandi • Hilsa • Nalanda (Bihar)</h2>
+        <p class="sub">Fast, practical & honest representation in Criminal, Civil, Family & Property matters. Available Mon–Sat (10 AM – 6 PM).</p>
+
+        <div class="actions">
+          <a class="btn" href="tel:+918757151951">📞 Call Now</a>
+          <a class="btn wa" href="https://wa.me/918757151951" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn" href="#contact" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">✉️ Send Message</a>
+        </div>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:14px">
+          <div class="quick card" style="min-width:220px;">
+            <strong>Quick Contact</strong>
+            <small>📞 +91 87571 51951</small>
+            <small>📍 Chandi, Hilsa, Nalanda (Bihar)</small>
+          </div>
+
+          <div class="quick card" style="min-width:220px;">
+            <strong>Office</strong>
+            <small>Fast legal assistance for bail, FIR, civil disputes & property matters.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- services list -->
       <div>
-        <h1>Premium Legal Services<br/>in Chandi • Hilsa • Nalanda (Bihar)</h1>
-        <p class="lead">Criminal, Civil, Family &amp; Property law specialist offering honest, professional representation and fast response.</p>
+        <div class="card" id="services">
+          <h3 style="margin-top:0;color:var(--gold)">Services</h3>
+          <div class="grid">
+            <div class="service">
+              <div class="ico">⚖️</div>
+              <div>
+                <h4>Criminal Cases</h4>
+                <p>Bail, FIR handling and defence representation.</p>
+              </div>
+            </div>
 
-        <div class="hero-actions">
-          <a class="btn btn-call" href="tel:+918757151951">📞 Call Now</a>
-          <a class="btn btn-wa" href="https://wa.me/918757151951" target="_blank">💬 WhatsApp</a>
-          <a class="btn btn-mail" href="mailto:anil.purushotam@example.com">✉️ Email</a>
-        </div>
+            <div class="service">
+              <div class="ico">🏛️</div>
+              <div>
+                <h4>Civil Matters</h4>
+                <p>Disputes, recovery, & court representation.</p>
+              </div>
+            </div>
 
-        <div class="card">
-          <h3>Quick Contact</h3>
-          <div class="contact-line">📍 Chandi · Hilsa · Nalanda</div>
-          <div class="contact-line">📞 <strong style="color:var(--gold)">+91 87571 51951</strong></div>
-          <div class="contact-line">🕒 Mon–Sat: 10 AM – 6 PM</div>
-          <div style="margin-top:12px"><a style="color:var(--gold);font-weight:700;text-decoration:underline" href="#contact">Contact Form</a></div>
-        </div>
-      </div>
+            <div class="service">
+              <div class="ico">👪</div>
+              <div>
+                <h4>Family Law</h4>
+                <p>Divorce, maintenance, custody — sensitive & prompt support.</p>
+              </div>
+            </div>
 
-      <!-- RIGHT: small overview card -->
-      <aside>
-        <div class="card" style="width:100%;max-width:420px">
-          <h3>Trusted Legal Services in Bihar</h3>
-          <p style="color:var(--muted);margin-top:8px">Bail, FIR, Civil disputes, Family law, Property matters — clear guidance and practical solutions.</p>
-          <div style="margin-top:12px;display:flex;gap:10px">
-            <a class="btn btn-call" href="tel:+918757151951">📞 Call</a>
-            <a class="btn btn-wa" href="https://wa.me/918757151951">💬 WhatsApp</a>
+            <div class="service">
+              <div class="ico">🏠</div>
+              <div>
+                <h4>Property Issues</h4>
+                <p>Title disputes, documentation & eviction cases.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </aside>
-    </section>
 
-    <!-- SERVICES -->
-    <section id="services" style="margin-top:28px">
-      <h2 style="color:var(--gold)">Services</h2>
-      <div class="services">
-        <div class="service">
-          <h4>⚖️ Criminal Cases</h4>
-          <p>Bail, FIR, defence & case handling in district and sessions courts.</p>
+        <!-- About -->
+        <div class="card" id="about" style="margin-top:16px">
+          <h3 style="color:var(--gold);margin-top:0">About Advocate</h3>
+          <p style="color:var(--muted);margin:0">
+            Advocate <strong>Anil Kumar Purushotam</strong> is a practicing lawyer in Nalanda district offering professional legal guidance with dedication and a focus on practical outcomes. Transparent fees, timely communication and strong client support are the core values.
+          </p>
         </div>
-        <div class="service">
-          <h4>🏠 Property Matters</h4>
-          <p>Title disputes, property recovery and documentation support.</p>
-        </div>
-        <div class="service">
-          <h4>👪 Family Law</h4>
-          <p>Divorce, maintenance, custody & family dispute resolution.</p>
-        </div>
-        <div class="service">
-          <h4>📝 Legal Drafting</h4>
-          <p>Agreements, notices, petitions and documentation.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" style="margin-top:30px">
-      <h2 style="color:var(--gold)">About Advocate</h2>
-      <p style="color:var(--muted);max-width:800px">
-        Advocate <strong>Anil Kumar Purushotam</strong> is a practicing lawyer serving Chandi, Hilsa and Nalanda district.
-        He provides professional representation in criminal, civil, family and property matters — with clear guidance and practical legal solutions.
-      </p>
-    </section>
+        <!-- Contact -->
+        <div class="card" id="contact" style="margin-top:16px">
+          <h3 style="color:var(--gold);margin-top:0">Contact</h3>
 
-    <!-- Contact form (simple; opens WhatsApp on submit) -->
-    <section id="contact" style="margin-top:28px">
-      <h2 style="color:var(--gold)">Contact</h2>
-      <div class="card" style="max-width:760px;">
-        <form id="contactForm">
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <input name="name" placeholder="Full name" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:transparent;color:#fff">
-            <input name="phone" placeholder="Phone number" required style="width:220px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:transparent;color:#fff">
-          </div>
-          <textarea name="msg" rows="4" placeholder="Your message" required style="width:100%;margin-top:10px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:transparent;color:#fff"></textarea>
-          <div style="margin-top:10px">
-            <button type="submit" class="btn btn-wa">Send via WhatsApp</button>
-          </div>
-        </form>
-        <small style="color:var(--muted);display:block;margin-top:12px">Or call: <strong style="color:var(--gold)">+91 87571 51951</strong></small>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <input id="name" placeholder="Full name" required />
+            <input id="phone" placeholder="Phone number" required />
+            <textarea id="msg" rows="4" placeholder="Brief message (case summary)" required></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="submit" type="submit">Send via WhatsApp</button>
+              <a class="btn" style="padding:10px 12px;align-self:center" href="tel:+918757151951">Call</a>
+            </div>
+            <small style="color:var(--muted)">By sending, you agree to be contacted for legal consultation. Confidentiality respected.</small>
+          </form>
+        </div>
       </div>
     </section>
 
     <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div>© <strong>Advocate Anil Kumar Purushotam</strong> — Nalanda, Bihar</div>
-        <div style="color:var(--muted)">Made with care • Mobile-friendly</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px">
+        <div>
+          <strong style="color:var(--gold)">Advocate Anil Kumar Purushotam</strong><br>
+          <span style="color:var(--muted)">Chandi • Hilsa • Nalanda (Bihar)</span>
+        </div>
+        <div style="color:var(--muted)">© <span id="year"></span> All rights reserved.</div>
       </div>
     </footer>
   </div>
 
-  <!-- JS: contact form sends message to WhatsApp with fields -->
+  <!-- lightweight JS -->
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e){
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // contact form: open whatsapp with message
+    function handleSubmit(e){
       e.preventDefault();
-      var name = this.name.value.trim();
-      var phone = this.phone.value.trim();
-      var msg = this.msg.value.trim();
-      var text = "Hello%0AName:%20" + encodeURIComponent(name) + "%0APhone:%20" + encodeURIComponent(phone) + "%0A%0A" + encodeURIComponent(msg);
-      // open WhatsApp (use country code +91 already)
-      var wa = "https://wa.me/918757151951?text=" + text;
-      window.open(wa, '_blank');
-    });
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const msg = encodeURIComponent(document.getElementById('msg').value.trim());
+      const text = `Hello, I am ${name}.\nPhone: ${phone}\n\nMessage: ${msg}\n\nI found your website and need legal help.`;
+      const wa = 'https://wa.me/918757151951?text=' + text;
+      window.open(wa,'_blank');
+    }
   </script>
 </body>
 </html>
