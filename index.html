@@ -3,306 +3,339 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Advocate Anil Kumar Purushotam — Premium Legal Services (Chandi · Hilsa · Nalanda)</title>
-  <meta name="description" content="Advocate Anil Kumar Purushotam — Criminal, Civil, Family & Property law services in Chandi, Hilsa, Nalanda. Fast, honest legal help. Call or WhatsApp."/>
-  <!-- Open Graph -->
-  <meta property="og:title" content="Advocate Anil Kumar Purushotam — Legal Services"/>
-  <meta property="og:description" content="Criminal, Civil, Family & Property law services in Chandi, Hilsa, Nalanda. Contact for quick legal help."/>
-  <meta property="og:type" content="website"/>
-  <meta name="theme-color" content="#07121a" />
-  <!-- (optional) Google verification if you want: -->
-  <!-- <meta name="google-site-verification" content="yviEMCfbDNnpRotIoF1sNneRYaqpMizip-rFN4xWZeM" /> -->
+  <title>Advocate Anil Kumar Purushotam — Legal Services (Chandi · Hilsa · Nalanda)</title>
+  <meta name="description" content="Advocate Anil Kumar Purushotam — Criminal, Civil, Family & Property law services in Chandi, Hilsa, Nalanda. Call or WhatsApp for quick help." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chandu582.github.io/Anilsir1-lawyer-website/">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Advocate Anil Kumar Purushotam — Legal Services" />
+  <meta property="og:description" content="Criminal, Civil, Family & Property law services in Chandi, Hilsa & Nalanda. Honest and practical legal help." />
+  <meta property="og:image" content="https://chandu582.github.io/Anilsir1-lawyer-website/thumb.png" />
+  <meta property="og:url" content="https://chandu582.github.io/Anilsir1-lawyer-website/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* ---------------- Variables (easy to tweak) ---------------- */
     :root{
-      --bg:#061018;
-      --card:#071621;
-      --muted:#9aa7ad;
-      --gold:#d4aa45;
-      --accent:#f3c973;
+      --maxw:1100px;
       --radius:14px;
+      --accent: #d4aa45;           /* gold */
+      --accent-2:#f4d78f;
+      --bg-1: #041217;
+      --bg-2: #071a1f;
+      --card: rgba(255,255,255,0.03);
+      --muted: #9db0b3;
+      --text: #e7f2f3;
       --glass: rgba(255,255,255,0.02);
-      --max-width:980px;
-      --easing: cubic-bezier(.2,.9,.3,1);
+      --gap: 16px;
+      --nav-height:72px;
+      --ease: cubic-bezier(.2,.9,.3,1);
     }
+
+    /* ---------------- Base ---------------- */
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(1200px 400px at 10% 8%, rgba(6,22,28,0.75), transparent), linear-gradient(180deg,#04161b 0%, #061018 60%);
-      color:#e7eef2;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding-bottom:60px;
-    }
+    body{margin:0;min-height:100vh;font-family:"Inter",system-ui, Arial;color:var(--text);
+         background: radial-gradient(800px 300px at 8% 6%, rgba(10,18,20,0.55), transparent),
+                     linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 60%);
+         -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:18px auto;padding:0 18px}
 
-    /* layout */
-    .container{max-width:var(--max-width);margin:18px auto;padding:16px}
-    header{
-      display:flex;align-items:center;gap:18px;justify-content:space-between;
-      position:sticky;top:12px;z-index:1200;padding:12px;border-radius:12px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    /* ---------------- Header / nav ---------------- */
+    header.site-header{
+      position:sticky;top:12px;z-index:1200;margin-bottom:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.018), transparent);
       border:1px solid rgba(255,255,255,0.03);
+      padding:12px;display:flex;align-items:center;justify-content:space-between;border-radius:12px;
+      transition:transform .28s var(--ease), box-shadow .28s var(--ease), padding .2s var(--ease);
       backdrop-filter: blur(6px);
-      transition: transform .28s var(--easing), padding .28s var(--easing), box-shadow .28s var(--easing);
     }
-    header.compact{transform:translateY(-4px);padding:8px;box-shadow:0 8px 30px rgba(2,6,8,0.5)}
-    .brand{display:flex;align-items:center;gap:12px}
+    header.site-header.small{padding:8px;box-shadow:0 20px 40px rgba(0,0,0,0.5);transform:translateY(-3px)}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
     .brand img{width:56px;height:56px;object-fit:contain;border-radius:50%;border:2px solid rgba(255,255,255,0.04);background:transparent}
-    .brand h1{font-size:18px;margin:0;color:var(--gold);letter-spacing:0.2px}
-    .brand p{margin:0;font-size:13px;color:var(--muted)}
+    .brand .title{font-weight:700;color:var(--accent);font-size:18px;line-height:1}
+    .brand .sub{font-size:12px;color:var(--muted);margin-top:2px}
 
-    /* nav */
-    .main-nav{display:flex;gap:18px;align-items:center}
-    .main-nav a{color:rgba(255,255,255,0.88);text-decoration:none;padding:6px 8px;border-radius:8px;font-weight:600}
-    .main-nav a:hover{background:rgba(255,255,255,0.02)}
+    nav.main{
+      display:flex;gap:10px;align-items:center;
+    }
+    nav.main a{padding:8px 12px;border-radius:10px;font-weight:600;color:rgba(255,255,255,0.95)}
+    nav.main a:hover{background:rgba(255,255,255,0.02)}
 
-    /* header actions */
-    .actions{display:flex;gap:10px;align-items:center}
+    /* compact actions */
+    .actions{display:flex;gap:8px;align-items:center}
     .btn{
-      display:inline-flex;gap:10px;align-items:center;justify-content:center;
-      padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);cursor:pointer;font-weight:700;text-decoration:none;color:inherit;
-      background:transparent;
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;font-weight:700;
+      border:1px solid rgba(255,255,255,0.04);cursor:pointer;background:transparent;color:var(--text);
+      transition:transform .14s var(--ease), box-shadow .14s var(--ease);
     }
-    .btn svg{width:18px;height:18px}
-    .btn.primary{
-      background:linear-gradient(180deg,var(--accent),var(--gold));
-      color:#061018;border:none;box-shadow:0 6px 20px rgba(212,170,69,0.12);
-    }
-    .btn.whatsapp{
-      background:linear-gradient(180deg,#42c463,#1fb44b);color:white;border:none;box-shadow:0 6px 20px rgba(20,150,70,0.12)
-    }
-    .icon-only{padding:10px;border-radius:12px;min-width:44px;height:44px;display:inline-grid;place-items:center}
+    .btn:active{transform:translateY(1px)}
+    .btn.call{background:linear-gradient(180deg,var(--accent-2),var(--accent));color:#07121a;border:none;box-shadow:0 8px 26px rgba(6,8,7,0.5)}
+    .btn.wa{background:linear-gradient(180deg,#4fd786,#16a64b);color:#fff;border:none}
+    .icon-only{padding:8px;border-radius:10px;min-width:44px;height:44px;display:grid;place-items:center}
 
-    /* hero card */
-    .hero{
-      margin-top:14px;padding:22px;border-radius:18px;background:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(2,6,8,0.45);
+    /* hamburger */
+    .hamburger{display:none;background:transparent;border:0;cursor:pointer;padding:6px}
+    .hamburger svg{width:28px;height:28px;opacity:.9}
+
+    /* ---------------- Hero ---------------- */
+    main.hero{margin-top:6px;padding:24px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);box-shadow:0 18px 40px rgba(2,6,8,0.45)}
+    .hero h1{font-size:28px;margin:0 0 8px;color:var(--accent);line-height:1.05}
+    .hero p.lead{color:var(--muted);margin:0 0 16px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .badge{background:var(--card);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+
+    /* ---------------- content cards ---------------- */
+    section{margin-top:24px}
+    .section-title{color:var(--accent);font-size:18px;margin-bottom:12px;font-weight:700}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.03)}
+    .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .service-item{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:10px;background:rgba(255,255,255,0.01);box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+    .service-item .icon{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,0.02)}
+
+    /* single column on mobile */
+    @media (max-width:820px){
+      .services-grid{grid-template-columns:1fr}
+      nav.main{display:none}
+      .hamburger{display:block}
+      .brand img{width:48px;height:48px}
+      .hero h1{font-size:22px}
+      header.site-header{padding:10px}
     }
-    .hero h2{font-size:28px;margin:0 0 8px;color:var(--gold);line-height:1.06}
-    .hero p.lead{color:var(--muted);margin:0 0 18px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 
-    .quick-info{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-    .pill{display:inline-flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
-
-    /* sections */
-    section{margin-top:26px}
-    .section-title{font-size:20px;color:var(--gold);margin-bottom:12px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
-    .service{display:flex;gap:16px;align-items:flex-start;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.03), rgba(255,255,255,0.01));margin-bottom:12px}
-    .service .icon{min-width:52px;height:52px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));display:grid;place-items:center}
-    .service h3{margin:0 0 6px;font-size:16px}
-    .service p{margin:0;color:var(--muted)}
+    /* micro animation classes */
+    .fade-up{opacity:0;transform:translateY(14px) scale(.995);transition:opacity .6s var(--ease), transform .6s var(--ease)}
+    .fade-up.visible{opacity:1;transform:none}
 
     /* footer */
-    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center;padding:20px 12px}
+    footer{margin-top:28px;color:var(--muted);text-align:center;padding:18px;font-size:13px}
 
-    /* responsive */
-    @media (max-width:880px){
-      .brand h1{font-size:16px}
-      header{padding:10px}
-      .main-nav{display:none}
-      .actions .btn{display:none}
-      .actions .icon-only{display:inline-flex}
-      .hero h2{font-size:22px}
-    }
-
-    /* reveal animations */
-    .reveal{opacity:0;transform:translateY(12px) scale(.995);transition:opacity .6s var(--easing), transform .6s var(--easing)}
-    .reveal.active{opacity:1;transform:translateY(0) scale(1)}
-
-    /* small utility */
+    /* small util */
     .muted{color:var(--muted)}
-    a{color:inherit}
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+    button[type="submit"]{cursor:pointer}
   </style>
 </head>
 <body>
 
   <div class="container">
 
-    <!-- header -->
-    <header id="siteHeader" class="">
-      <div class="brand" style="min-width:0">
-        <img src="logo.png" alt="Advocate Anil Kumar Purushotam logo" onerror="this.style.display='none'">
-        <div style="min-width:0">
-          <h1>Advocate Anil Kumar Purushotam</h1>
-          <p class="muted">Chandi · Hilsa · Nalanda (Nalanda district)</p>
+    <!-- HEADER -->
+    <header class="site-header" id="header">
+      <div class="brand">
+        <img src="logo.png" alt="AKP logo" id="logo" onerror="this.style.display='none'">
+        <div>
+          <div class="title">Advocate Anil Kumar Purushotam</div>
+          <div class="sub muted">Chandi · Hilsa · Nalanda</div>
         </div>
       </div>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="main" id="mainNav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="actions">
-        <!-- compact icons visible on mobile, full buttons on desktop -->
-        <a class="btn icon-only" title="Call" href="tel:+918757151951" aria-label="Call">
-          <!-- phone svg -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#061018"><path d="M6.6 10.2a15.5 15.5 0 006.2 6.2l1.9-1.9a1 1 0 01.9-.3c1 .2 2 .3 2.9.3a1 1 0 011 1V20a1 1 0 01-1 1A18 18 0 015 5a1 1 0 011-1h2.4a1 1 0 011 1c0 1 .1 1.9.3 2.9.1.4 0 .8-.3.9L6.6 10.2z"/></svg>
-        </a>
-        <a class="btn icon-only" title="WhatsApp" href="https://wa.me/918757151951" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M20.5 3.5A11 11 0 003.1 20l-1.4 4 4-1.2A11 11 0 1020.5 3.5zM12 18.2c-.6 0-1.2-.1-1.8-.3l-3.1.9.9-3.1c-.2-.6-.3-1.2-.3-1.8 0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6z"/></svg>
+        <button class="hamburger" id="openMenu" aria-label="Open menu" title="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e7f2f3" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <a class="btn call" href="tel:+918757151951" aria-label="Call">
+          <!-- phone icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#061018"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 01.9-.3c1 .2 2 .3 2.9.3a1 1 0 011 1V20a1 1 0 01-1 1A18 18 0 015 5a1 1 0 011-1h2.5a1 1 0 01.9.7c.05.4.12.8.26 1.17a1 1 0 01-.36.99L6.6 10.8z"/></svg>
+          <span style="margin-left:6px">Call</span>
         </a>
 
-        <a class="btn primary" href="tel:+918757151951" style="display:inline-flex">
-          <!-- phone with label -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#061018"><path d="M6.6 10.2a15.5 15.5 0 006.2 6.2l1.9-1.9a1 1 0 01.9-.3c1 .2 2 .3 2.9.3a1 1 0 011 1V20a1 1 0 01-1 1A18 18 0 015 5a1 1 0 011-1h2.4a1 1 0 011 1c0 1 .1 1.9.3 2.9.1.4 0 .8-.3.9L6.6 10.2z"/></svg>
-          <span style="margin-left:8px">Call</span>
-        </a>
-
-        <a class="btn whatsapp" href="https://wa.me/918757151951" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M20.5 3.5A11 11 0 003.1 20l-1.4 4 4-1.2A11 11 0 1020.5 3.5zM12 18.2c-.6 0-1.2-.1-1.8-.3l-3.1.9.9-3.1c-.2-.6-.3-1.2-.3-1.8 0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6z"/></svg>
-          <span style="margin-left:8px">WhatsApp</span>
+        <a class="btn wa" href="https://wa.me/918757151951?text=Hello%20Advocate%20Anil" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M20.5 3.5A11 11 0 003.1 20l-1.4 4 4-1.2A11 11 0 1020.5 3.5zM12 18.2c-.6 0-1.2-.1-1.8-.3l-3.1.9.9-3.1c-.2-.6-.3-1.2-.3-1.8 0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6z"/></svg>
+          <span style="margin-left:6px">WhatsApp</span>
         </a>
       </div>
     </header>
 
-    <!-- hero -->
-    <div class="hero reveal" id="hero">
-      <h2>Premium Legal Services in <strong style="color:var(--gold)">Chandi · Hilsa · Nalanda</strong></h2>
-      <p class="lead">Fast, practical & honest representation in Criminal, Civil, Family & Property matters. Available Mon–Sat (10:00–18:00).</p>
-
-      <div class="cta-row">
-        <a class="btn primary" href="tel:+918757151951"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#061018"><path d="M6.6 10.2a15.5 15.5 0 006.2 6.2l1.9-1.9a1 1 0 01.9-.3c1 .2 2 .3 2.9.3a1 1 0 011 1V20a1 1 0 01-1 1A18 18 0 015 5a1 1 0 011-1h2.4a1 1 0 011 1c0 1 .1 1.9.3 2.9.1.4 0 .8-.3.9L6.6 10.2z"/></svg> <span>Call</span></a>
-
-        <a class="btn whatsapp" href="https://wa.me/918757151951" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M20.5 3.5A11 11 0 003.1 20l-1.4 4 4-1.2A11 11 0 1020.5 3.5zM12 18.2c-.6 0-1.2-.1-1.8-.3l-3.1.9.9-3.1c-.2-.6-.3-1.2-.3-1.8 0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6z"/></svg> <span>WhatsApp</span></a>
-
-        <a class="btn" href="#contact" style="border:1px solid rgba(255,255,255,0.04);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9aa7ad"><path d="M21 8V7l-3 2-2-2-5 3v2l-3 2v5h14V8z"/></svg> <span style="margin-left:8px">Message</span></a>
+    <!-- MOBILE NAV PANEL -->
+    <div id="mobilePanel" style="display:none;position:fixed;inset:0;background:linear-gradient(180deg, rgba(1,6,8,0.85), rgba(0,0,0,0.85));z-index:2000;padding:28px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="logo.png" alt="logo" style="width:56px;height:56px;border-radius:50%" onerror="this.style.display='none'">
+          <div>
+            <div style="color:var(--accent);font-weight:800">Advocate Anil Kumar Purushotam</div>
+            <div style="color:var(--muted)">Chandi · Hilsa · Nalanda</div>
+          </div>
+        </div>
+        <button id="closeMenu" class="hamburger" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#e7f2f3" stroke-width="1.8"><path d="M6 6l12 12M6 18L18 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
-
-      <div class="quick-info">
-        <div class="pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.9"><path d="M6.62 10.79a15.07 15.07 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .2 1.99.31 2.9.31a1 1 0 011 1V20a1 1 0 01-1 1A18 18 0 015 5a1 1 0 011-1h2.5a1 1 0 011 .75c.05.4.12.8.26 1.17a1 1 0 01-.35.99L6.62 10.79z"/></svg> <span>+91 87571 51951</span></div>
-
-        <div class="pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.9"><path d="M12 2a7 7 0 00-7 7c0 7 7 13 7 13s7-6 7-13a7 7 0 00-7-7zM12 11.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg> <span>Chandi · Hilsa · Nalanda</span></div>
-
-        <div class="pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.9"><path d="M12 1a11 11 0 100 22 11 11 0 000-22zm1 11h3v1h-4V7h1v5z"/></svg> <span>Mon–Sat 10:00–18:00</span></div>
-      </div>
+      <nav style="display:flex;flex-direction:column;gap:12px;padding-top:8px">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
     </div>
 
+    <!-- HERO -->
+    <main class="hero">
+      <h1 class="fade-up">Premium Legal Services — <span style="color:var(--accent)">Chandi · Hilsa · Nalanda</span></h1>
+      <p class="lead fade-up">Practical & honest representation in Criminal, Civil, Family & Property matters. Fast responses. Available Mon–Sat (10:00–18:00).</p>
+
+      <div class="cta fade-up" style="margin-top:12px">
+        <a class="btn call" href="tel:+918757151951">📞 Call</a>
+        <a class="btn wa" href="https://wa.me/918757151951?text=Hello%20Advocate%20Anil" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn" href="#contact" style="border:1px solid rgba(255,255,255,0.04)">✉️ Message</a>
+      </div>
+
+      <div class="badges fade-up" style="margin-top:14px">
+        <div class="badge">📞 +91 87571 51951</div>
+        <div class="badge">📍 Chandi · Hilsa · Nalanda</div>
+        <div class="badge">⏰ Mon–Sat 10:00–18:00</div>
+      </div>
+    </main>
+
     <!-- ABOUT -->
-    <section id="about" class="reveal">
-      <h3 class="section-title">About Advocate</h3>
+    <section id="about" class="fade-up">
+      <h2 class="section-title">About</h2>
       <div class="card">
-        <p><strong>Advocate Anil Kumar Purushotam</strong> is a practicing lawyer with experience in Criminal, Civil, Family and Property matters. Providing clear guidance, practical legal solutions, and honest representation in Nalanda district.</p>
+        <p><strong>Advocate Anil Kumar Purushotam</strong> is a practicing lawyer focused on Criminal, Civil, Family and Property law in Nalanda district. He provides realistic guidance, prepares documents thoroughly, and represents clients honestly in court and settlement matters.</p>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="reveal">
-      <h3 class="section-title">Services</h3>
+    <section id="services" class="fade-up">
+      <h2 class="section-title">Services</h2>
       <div class="card">
-        <div class="service">
-          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="#c2dbe0"><path d="M12 2l3 7h-6l3-7zM5 21v-2h14v2H5z"/></svg></div>
-          <div>
-            <h3>Criminal Cases</h3>
-            <p>Bail, FIR handling, defence & court representation.</p>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="icon">⚖️</div>
+            <div>
+              <strong>Criminal Cases</strong>
+              <div class="muted">Bail, FIR handling, defence & representation in criminal courts.</div>
+            </div>
           </div>
-        </div>
 
-        <div class="service">
-          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="#c2dbe0"><path d="M12 2l1.8 3.6L18 7l-3 3.2L16 14l-4-2-4 2 1-3.8L6 7l4.2-1.4L12 2z"/></svg></div>
-          <div>
-            <h3>Civil Matters</h3>
-            <p>Contracts, recovery, consumer & civil suits.</p>
+          <div class="service-item">
+            <div class="icon">🏛️</div>
+            <div>
+              <strong>Civil Matters</strong>
+              <div class="muted">Contracts, recovery, consumer disputes & civil suits.</div>
+            </div>
           </div>
-        </div>
 
-        <div class="service">
-          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="#c2dbe0"><path d="M12 3l3 6H9l3-6zM4 13h16v8H4v-8z"/></svg></div>
-          <div>
-            <h3>Family Law</h3>
-            <p>Divorce, maintenance, custody & family disputes.</p>
+          <div class="service-item">
+            <div class="icon">👨‍👩‍👧</div>
+            <div>
+              <strong>Family Law</strong>
+              <div class="muted">Divorce, maintenance, custody & family settlements.</div>
+            </div>
           </div>
-        </div>
 
-        <div class="service">
-          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="#c2dbe0"><path d="M3 6h18v2H3zM4 10h16v10H4z"/></svg></div>
-          <div>
-            <h3>Property & Drafting</h3>
-            <p>Sale deeds, property disputes, legal drafting.</p>
+          <div class="service-item">
+            <div class="icon">📜</div>
+            <div>
+              <strong>Property & Drafting</strong>
+              <div class="muted">Sale deeds, agreements, title disputes and legal drafting.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="reveal">
-      <h3 class="section-title">Contact</h3>
+    <section id="contact" class="fade-up">
+      <h2 class="section-title">Contact</h2>
       <div class="card">
-        <p class="muted">For quick help, use call or WhatsApp. For messages, use the contact form (it opens your WhatsApp with prefilled message).</p>
-        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-          <a class="btn primary" href="tel:+918757151951">📞 Call</a>
-          <a class="btn whatsapp" href="https://wa.me/918757151951?text=Hello%20Advocate%20Anil,%20I%20want%20help." target="_blank">💬 WhatsApp</a>
-        </div>
+        <p class="muted">Quick contact via WhatsApp or phone. Use the form to send a prefilled WhatsApp message.</p>
 
-        <form id="contactForm" style="margin-top:14px;display:grid;gap:10px;max-width:520px">
-          <input id="name" name="name" placeholder="Full name" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
-          <input id="phone" name="phone" placeholder="Phone number" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
-          <textarea id="msg" name="msg" rows="4" placeholder="Your message" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
-          <div style="display:flex;gap:10px">
-            <button type="submit" class="btn primary">Send via WhatsApp</button>
-            <button type="button" id="clearBtn" class="btn" style="border:1px solid rgba(255,255,255,0.04)">Clear</button>
+        <form id="contactForm" style="margin-top:12px;display:grid;gap:8px;max-width:620px">
+          <input id="name" placeholder="Full name" required />
+          <input id="phone" placeholder="Phone number" required />
+          <textarea id="msg" placeholder="Brief message (optional)"></textarea>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button type="submit" class="btn call">Send</button>
+            <button type="button" id="clear" class="btn">Clear</button>
           </div>
         </form>
       </div>
     </section>
 
-    <footer class="reveal">
+    <footer class="fade-up" style="margin-top:28px">
       &copy; <span id="year"></span> Advocate Anil Kumar Purushotam — All rights reserved.
     </footer>
-
   </div>
 
   <script>
-    // sticky header shrink
+    // ---------- small helpers ----------
+    const add = (el, cls) => el.classList.add(cls);
+    const rem = (el, cls) => el.classList.remove(cls);
+
+    // ---------- header shrink when scrolling ----------
     (function(){
-      const header = document.getElementById('siteHeader');
-      let lastScroll = 0;
-      window.addEventListener('scroll', function(){
-        const y = window.scrollY;
-        if(y > 60) header.classList.add('compact'); else header.classList.remove('compact');
-        lastScroll = y;
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 70) header.classList.add('small'); else header.classList.remove('small');
       }, {passive:true});
     })();
 
-    // reveal on scroll (IntersectionObserver)
+    // ---------- mobile panel ----------
     (function(){
-      const reveals = document.querySelectorAll('.reveal');
-      const obs = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            e.target.classList.add('active');
-            // unobserve to keep performance
-            obs.unobserve(e.target);
+      const open = document.getElementById('openMenu');
+      const close = document.getElementById('closeMenu');
+      const panel = document.getElementById('mobilePanel');
+      if(open && close && panel){
+        open.addEventListener('click', ()=> panel.style.display='block');
+        close.addEventListener('click', ()=> panel.style.display='none');
+        // close when clicking a nav link
+        document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', ()=> panel.style.display='none'));
+      }
+    })();
+
+    // ---------- reveal with small stagger ----------
+    (function(){
+      const items = document.querySelectorAll('.fade-up');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            const el = entry.target;
+            setTimeout(()=> el.classList.add('visible'), el.dataset.delay ? parseInt(el.dataset.delay): 50);
+            io.unobserve(el);
           }
         });
       }, {threshold:0.12});
-      reveals.forEach(r=>obs.observe(r));
+      items.forEach((it,i)=> { it.dataset.delay = 60 * i; io.observe(it); });
     })();
 
-    // contact form -> open WhatsApp with prefilled message
+    // ---------- contact to WhatsApp ----------
     (function(){
       const form = document.getElementById('contactForm');
-      const clearBtn = document.getElementById('clearBtn');
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        const name = encodeURIComponent(document.getElementById('name').value || '');
-        const phone = encodeURIComponent(document.getElementById('phone').value || '');
-        const msg = encodeURIComponent(document.getElementById('msg').value || '');
-        const text = `Name: ${name}%0APhone: ${phone}%0AMessage: ${msg}`;
-        const url = `https://wa.me/918757151951?text=${text}`;
-        window.open(url, '_blank');
-      });
-      clearBtn.addEventListener('click', function(){ form.reset(); });
+      const clear = document.getElementById('clear');
+      if(form){
+        form.addEventListener('submit', e=>{
+          e.preventDefault();
+          const n = encodeURIComponent(document.getElementById('name').value || 'N/A');
+          const p = encodeURIComponent(document.getElementById('phone').value || 'N/A');
+          const m = encodeURIComponent(document.getElementById('msg').value || '');
+          const text = `Name: ${n}%0APhone: ${p}%0AMessage: ${m}`;
+          const url = `https://wa.me/918757151951?text=${text}`;
+          window.open(url, '_blank');
+        });
+      }
+      if(clear) clear.addEventListener('click', ()=> form.reset());
     })();
 
-    // set current year
+    // ---------- year ----------
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---------- prefetch images if present ----------
+    (function(){
+      new Image().src = 'logo.png';
+      new Image().src = 'thumb.png';
+    })();
   </script>
 
 </body>
