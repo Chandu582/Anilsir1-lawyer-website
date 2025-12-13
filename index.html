@@ -1,138 +1,202 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Advocate Anil Kumar Purushotam | Lawyer in Chandi, Hilsa, Nalanda</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Advocate Anil Kumar Purushotam is a trusted Criminal, Civil, Family & Property Lawyer in Chandi, Hilsa and Nalanda (Bihar). Call or WhatsApp for legal help.">
-  <meta name="keywords" content="Advocate Anil Kumar Purushotam, Lawyer in Chandi, Advocate in Hilsa, Lawyer in Nalanda, Criminal Lawyer Nalanda, Civil Lawyer Chandi, Family Lawyer Hilsa, Property Lawyer Nalanda">
-  <meta name="robots" content="index, follow">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advocate Anil Kumar Purushotam — Legal Services (Chandi · Hilsa · Nalanda)</title>
+  <meta name="description" content="Advocate Anil Kumar Purushotam — Criminal, Civil, Family & Property law services in Chandi, Hilsa, Nalanda. Call or WhatsApp for quick help." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://chandu582.github.io/Anilsir1-lawyer-website/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Advocate Anil Kumar Purushotam | Lawyer in Nalanda">
-  <meta property="og:description" content="Criminal, Civil, Family & Property legal services in Chandi, Hilsa & Nalanda.">
-  <meta property="og:image" content="https://chandu582.github.io/Anilsir1-lawyer-website/logo.png">
-  <meta property="og:url" content="https://chandu582.github.io/Anilsir1-lawyer-website/">
-
-  <!-- Fonts -->
+  <meta property="og:title" content="Advocate Anil Kumar Purushotam — Legal Services" />
+  <meta property="og:description" content="Criminal, Civil, Family & Property law services in Chandi, Hilsa & Nalanda. Honest and practical legal help." />
+  <meta property="og:image" content="https://chandu582.github.io/Anilsir1-lawyer-website/thumb.png" />
+  <meta property="og:url" content="https://chandu582.github.io/Anilsir1-lawyer-website/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Advocate Anil Kumar Purushotam",
-    "url": "https://chandu582.github.io/Anilsir1-lawyer-website/",
-    "logo": "https://chandu582.github.io/Anilsir1-lawyer-website/logo.png",
-    "telephone": "+91-8757151951",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Chandi, Hilsa",
-      "addressRegion": "Nalanda",
-      "addressCountry": "IN"
-    },
-    "areaServed": "Nalanda, Bihar",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    }
-  }
-  </script>
 
   <style>
     :root{
-      --bg:#041217;
-      --card:rgba(255,255,255,.03);
-      --text:#e7f2f3;
-      --muted:#9db0b3;
-      --accent:#d4aa45;
+      --maxw:1100px;--accent:#d4aa45;--accent-2:#f4d78f;--bg1:#041217;--bg2:#071a1f;
+      --muted:#9db0b3;--text:#e7f2f3;--card:rgba(255,255,255,0.03);--radius:14px;
+      --navh:72px;--ease:cubic-bezier(.2,.9,.3,1)
     }
-    body.light{
-      --bg:#f4f6f7;
-      --card:#fff;
-      --text:#111;
-      --muted:#555;
-    }
+    *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:Inter,Arial;
-      background:var(--bg);
+      margin:0;font-family:Inter,system-ui,Arial;
+      background:
+      radial-gradient(800px 300px at 8% 6%, rgba(10,18,20,0.55), transparent),
+      linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 60%);
       color:var(--text);
-      transition:.3s;
+      -webkit-font-smoothing:antialiased
     }
-    .container{max-width:1100px;margin:auto;padding:18px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:10px}
-    .btn{padding:8px 12px;border-radius:10px;font-weight:700}
-    .call{background:#d4aa45;color:#000}
-    .wa{background:#25d366;color:#fff}
-    .toggle{cursor:pointer;font-size:18px}
-    .card{background:var(--card);padding:16px;border-radius:12px;margin:10px 0}
-    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .testimonial{display:none}
-    .testimonial.active{display:block}
-    footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
-    iframe{width:100%;border-radius:12px;border:0;height:280px}
-    @media(max-width:768px){.services{grid-template-columns:1fr}}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:18px auto;padding:0 18px}
+
+    header.site-header{
+      position:sticky;top:12px;z-index:1200;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:10px;padding:12px;border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+      border:1px solid rgba(255,255,255,0.03);
+      backdrop-filter:blur(6px);
+      transition:all .25s var(--ease)
+    }
+    header.small{
+      padding:8px;
+      transform:translateY(-4px);
+      box-shadow:0 18px 40px rgba(2,6,8,0.45)
+    }
+    .brand{display:flex;gap:12px;align-items:center;min-width:0}
+    .brand img{
+      width:56px;height:56px;border-radius:50%;
+      object-fit:contain;
+      border:2px solid rgba(255,255,255,0.04)
+    }
+    .brand .title{
+      font-weight:800;color:var(--accent);
+      font-size:18px;line-height:1
+    }
+    .brand .sub{font-size:12px;color:var(--muted)}
+
+    nav.main{display:flex;gap:12px;align-items:center}
+    nav.main a{
+      padding:8px 12px;border-radius:10px;
+      font-weight:600;color:rgba(255,255,255,0.95)
+    }
+    nav.main a:hover{background:rgba(255,255,255,0.02)}
+
+    .actions{display:flex;gap:8px;align-items:center}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:12px;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,0.04);
+      cursor:pointer;background:transparent;
+      color:var(--text)
+    }
+    .btn.call{
+      background:linear-gradient(180deg,var(--accent-2),var(--accent));
+      color:#07121a;border:none
+    }
+    .btn.wa{
+      background:linear-gradient(180deg,#4fd786,#16a64b);
+      color:#fff;border:none
+    }
+
+    main.hero{
+      margin-top:8px;padding:22px;border-radius:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      border:1px solid rgba(255,255,255,0.03)
+    }
+    .hero h1{font-size:28px;margin:0;color:var(--accent)}
+    .lead{color:var(--muted);margin:10px 0 14px}
+
+    .section-title{
+      color:var(--accent);font-size:18px;
+      margin:6px 0 12px;font-weight:700
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      border-radius:12px;padding:16px;
+      border:1px solid rgba(255,255,255,0.03)
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px
+    }
+    .service-item{
+      display:flex;gap:12px;
+      align-items:flex-start;
+      padding:14px;border-radius:10px;
+      background:rgba(255,255,255,0.01)
+    }
+    .service-item .icon{
+      width:56px;height:56px;
+      border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,0.02)
+    }
+
+    .test-track{
+      overflow:hidden;border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      padding:18px
+    }
+    .test-slide{min-height:72px;display:none}
+    .test-slide.active{display:block}
+
+    footer{
+      margin-top:28px;color:var(--muted);
+      text-align:center;padding:18px;font-size:13px
+    }
   </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<header>
-  <strong>Advocate Anil Kumar Purushotam</strong>
-  <div>
-    <span class="toggle" onclick="toggleMode()">🌙</span>
+<header class="site-header" id="header">
+  <div class="brand">
+    <img src="logo.png" alt="AKP logo">
+    <div>
+      <div class="title">Advocate Anil Kumar Purushotam</div>
+      <div class="sub">Chandi · Hilsa · Nalanda</div>
+    </div>
+  </div>
+
+  <nav class="main">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="actions">
     <a class="btn call" href="tel:+918757151951">Call</a>
-    <a class="btn wa" href="https://wa.me/918757151951" target="_blank">WhatsApp</a>
+    <a class="btn wa" href="https://wa.me/918757151951">WhatsApp</a>
   </div>
 </header>
 
-<div class="card">
-  <h1>Trusted Legal Services</h1>
-  Criminal, Civil, Family & Property Law – Chandi · Hilsa · Nalanda
-</div>
+<main class="hero">
+  <h1>Premium Legal Services — Chandi · Hilsa · Nalanda</h1>
+  <p class="lead">Practical & honest representation in Criminal, Civil, Family & Property matters.</p>
+</main>
 
-<div class="card services">
-  <div>⚖️ Criminal Law</div>
-  <div>🏛️ Civil Matters</div>
-  <div>👨‍👩‍👧 Family Law</div>
-  <div>📜 Property Law</div>
-</div>
+<section id="about">
+  <h2 class="section-title">About</h2>
+  <div class="card">
+    <p><strong>Advocate Anil Kumar Purushotam</strong> is a practicing lawyer focused on Criminal, Civil, Family and Property law in Nalanda district.</p>
+  </div>
+</section>
 
-<h3>Client Testimonials</h3>
-<div class="card">
-  <div class="testimonial active">Ramesh K. (Hilsa) – Quick bail and clear guidance.</div>
-  <div class="testimonial">Savita P. (Chandi) – Excellent property documentation help.</div>
-  <div class="testimonial">Vikram S. (Nalanda) – Honest and practical advice.</div>
-  <div class="testimonial">Sunita D. – Family case handled respectfully.</div>
-  <div class="testimonial">Rahul M. – Professional court representation.</div>
-  <div class="testimonial">Neha S. – Very supportive lawyer.</div>
-  <div class="testimonial">Anil T. – Property dispute resolved.</div>
-  <div class="testimonial">Manoj K. – Knowledgeable advocate.</div>
-  <div class="testimonial">Kavita J. – Smooth documentation.</div>
-  <div class="testimonial">Deepak Y. – Honest opinion.</div>
-  <div class="testimonial">Sanjay L. – Good experience.</div>
-  <div class="testimonial">Ritu P. – Satisfied service.</div>
-  <div class="testimonial">Pankaj R. – Clear legal steps.</div>
-  <div class="testimonial">Amit K. – Fast response.</div>
-  <div class="testimonial">Priya N. – Trustworthy support.</div>
-</div>
+<section id="services">
+  <h2 class="section-title">Services</h2>
+  <div class="card services-grid">
+    <div class="service-item"><div class="icon">⚖️</div>Criminal Cases</div>
+    <div class="service-item"><div class="icon">🏛️</div>Civil Matters</div>
+    <div class="service-item"><div class="icon">👨‍👩‍👧</div>Family Law</div>
+    <div class="service-item"><div class="icon">📜</div>Property & Drafting</div>
+  </div>
+</section>
 
-<h3>Location</h3>
-<div class="card">
-  <iframe 
-    src="https://www.google.com/maps?q=Chandi+Nalanda+Bihar&output=embed">
-  </iframe>
-</div>
+<section>
+  <h2 class="section-title">Client Testimonials</h2>
+  <div class="test-track">
+    <div class="test-slide active">Ramesh K. — Quick and clear guidance.</div>
+    <div class="test-slide">Savita P. — Very reliable advice.</div>
+    <div class="test-slide">Vikram S. — Honest and practical.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="card">
+    📞 +91 87571 51951<br>
+    📍 Chandi · Hilsa · Nalanda
+  </div>
+</section>
 
 <footer>
   © <span id="year"></span> Advocate Anil Kumar Purushotam
@@ -140,17 +204,10 @@
 
 </div>
 
-<!-- WhatsApp Floating -->
-<a href="https://wa.me/918757151951" target="_blank"
-style="position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;
-padding:14px;border-radius:50%;font-size:22px;text-decoration:none;">💬</a>
-
 <script>
-  // Testimonials rotation
-  const t=document.querySelectorAll('.testimonial');let i=0;
-  setInterval(()=>{t[i].classList.remove('active');i=(i+1)%t.length;t[i].classList.add('active')},3500);
-  document.getElementById('year').textContent=new Date().getFullYear();
-  function toggleMode(){document.body.classList.toggle('light')}
+document.getElementById("year").innerText=new Date().getFullYear();
+let i=0;const t=document.querySelectorAll(".test-slide");
+setInterval(()=>{t[i].classList.remove("active");i=(i+1)%t.length;t[i].classList.add("active")},4500);
 </script>
 
 </body>
