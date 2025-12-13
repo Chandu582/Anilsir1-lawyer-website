@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Advocate Anil Kumar Purushotam | Lawyer in Chandi, Hilsa, Nalanda</title>
-
 <meta name="description" content="Criminal, Civil, Family & Property Lawyer in Chandi, Hilsa & Nalanda. Advocate Anil Kumar Purushotam. Call or WhatsApp now.">
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://chandu582.github.io/Anilsir1-lawyer-website/">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- SCHEMA -->
@@ -25,7 +24,7 @@
    "addressRegion":"Bihar",
    "addressCountry":"IN"
  },
- "areaServed":["Chandi","Hilsa","Nalanda"],
+ "areaServed":["Chandi","Hilsa","Nalanda","Bihar Sharif"],
  "openingHours":"Mo-Sa 10:00-18:00",
  "url":"https://chandu582.github.io/Anilsir1-lawyer-website/"
 }
@@ -78,21 +77,21 @@ header{
 /* TESTIMONIALS */
 .test-track{
  background:var(--card);border-radius:18px;
- padding:26px;min-height:200px;
+ padding:28px;min-height:220px;
  display:flex;justify-content:center;align-items:center
 }
 .review{
- max-width:620px;text-align:center;
- opacity:0;transform:translateY(20px);
+ max-width:640px;text-align:center;
+ opacity:0;transform:translateY(25px);
  transition:all .7s ease
 }
 .review.active{opacity:1;transform:none}
-.stars{color:#f5c542;font-size:18px;margin-top:6px}
+.stars{color:#f5c542;font-size:18px;margin-top:8px}
 
 /* FORM */
 .form-card{
  background:linear-gradient(180deg,#0b242c,#071a1f);
- padding:24px;border-radius:18px
+ padding:26px;border-radius:18px
 }
 input,textarea{
  width:100%;margin-top:12px;
@@ -104,7 +103,7 @@ input,textarea{
 /* FOOTER */
 footer{text-align:center;margin:36px 0;color:var(--muted)}
 
-/* ANIMATION */
+/* SCROLL ANIMATION */
 .fade-up{
  opacity:0;transform:translateY(30px);
  transition:all .9s ease
@@ -123,7 +122,7 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
 
 <header>
  <div class="brand">
-  <img src="logo.png" alt="Logo">
+  <img src="logo.png" alt="Advocate Logo" onerror="this.style.display='none'">
   <div>
    <strong>Advocate Anil Kumar Purushotam</strong><br>
    <small>Chandi · Hilsa · Nalanda</small>
@@ -147,10 +146,10 @@ Practical & honest representation in Criminal, Civil, Family & Property matters.
 <section class="section fade-up">
 <h2>Services</h2>
 <div class="services">
- <div class="service"><strong>⚖️ Criminal Law</strong><p class="muted">Bail, FIR, defence, trial & police cases.</p></div>
- <div class="service"><strong>🏛️ Civil Law</strong><p class="muted">Civil suits, recovery, injunctions & disputes.</p></div>
- <div class="service"><strong>👨‍👩‍👧 Family Law</strong><p class="muted">Divorce, maintenance, custody & DV cases.</p></div>
- <div class="service"><strong>📜 Property</strong><p class="muted">Sale deed, title disputes, agreements.</p></div>
+ <div class="service"><strong>⚖️ Criminal Law</strong><p class="muted">Bail, FIR handling, defence, trial, police & criminal complaints.</p></div>
+ <div class="service"><strong>🏛️ Civil Law</strong><p class="muted">Civil suits, recovery, injunctions, contract & consumer disputes.</p></div>
+ <div class="service"><strong>👨‍👩‍👧 Family Law</strong><p class="muted">Divorce, maintenance, child custody, DV & settlements.</p></div>
+ <div class="service"><strong>📜 Property & Drafting</strong><p class="muted">Sale deed, title disputes, agreements, partition & verification.</p></div>
 </div>
 </section>
 
@@ -184,13 +183,13 @@ width="100%" height="280" loading="lazy"></iframe>
 
 </div>
 
-<!-- JS -->
 <script>
 const reviews=[
-["Ramesh Kumar","Hilsa",5,"Bail process fast raha aur guidance bilkul clear thi."],
-["Sunita Devi","Chandi",5,"Property dispute peacefully resolve hua."],
-["Amit Verma","Nalanda",5,"Court process clearly samajh aaya."],
-["Pooja Singh","Bihar Sharif",5,"Family matter respectfully handle kiya."]
+["Ramesh Kumar","Hilsa",5,"Bail process fast raha aur guidance bilkul clear thi. Court experience ka fayda mila."],
+["Sunita Devi","Chandi",5,"Property dispute peacefully resolve hua. Documentation aur legal advice excellent thi."],
+["Amit Verma","Nalanda",5,"Court procedure clearly samajh aaya. Har hearing ka proper update mila."],
+["Pooja Singh","Bihar Sharif",5,"Family matter respectful aur calm tarike se handle kiya."],
+["Sanjay Yadav","Chandi",5,"Emergency bail case mein immediate response aur relief mila."]
 ];
 let i=0,box=document.getElementById("reviewBox");
 function show(){
@@ -199,7 +198,7 @@ function show(){
  setTimeout(()=>{
  box.innerHTML=`<strong>${r[0]}</strong> — ${r[1]}
  <div class="stars">${"★".repeat(r[2])}</div>
- <p class="muted" style="margin-top:10px">${r[3]}</p>`;
+ <p class="muted" style="margin-top:12px">${r[3]}</p>`;
  box.classList.add("active");
  i=(i+1)%reviews.length;
  },200);
