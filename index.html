@@ -1,9 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advocate Anil Kumar Purushotam | Best Lawyer in Chandi, Hilsa, Nalanda</title>
 <meta name="description" content="Trusted Criminal, Civil, Family & Property Lawyer in Chandi, Hilsa & Nalanda. 10+ years experience. Call or WhatsApp Advocate Anil Kumar Purushotam.">
 <meta name="robots" content="index, follow">
@@ -11,13 +10,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- SCHEMA -->
+<!-- Schema JSON-LD -->
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@type":"LegalService",
  "name":"Advocate Anil Kumar Purushotam",
- "telephone":"+91-8757151951",
+ "telephone":"+918757151951",
  "address":{"@type":"PostalAddress","addressLocality":"Chandi","addressRegion":"Bihar","addressCountry":"IN"},
  "areaServed":["Chandi","Hilsa","Nalanda","Bihar Sharif"],
  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"120"},
@@ -28,8 +27,8 @@
 
 <style>
 :root{
- --bg:#041217;--card:#071a1f;--card2:#0b242c;
- --accent:#d4aa45;--muted:#9db0b3
+ --bg:#041217; --card:#071a1f; --card2:#0b242c;
+ --accent:#d4aa45; --muted:#9db0b3;
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter;background:var(--bg);color:#e7f2f3}
@@ -46,33 +45,33 @@ header{
 .brand{display:flex;gap:12px;align-items:center}
 .brand img{width:48px;height:48px;border-radius:50%}
 .brand strong{color:var(--accent)}
-
 .actions{display:flex;gap:10px}
 .action-btn{
  display:flex;align-items:center;gap:8px;
  padding:10px 12px;border-radius:12px;
- background:var(--card2);font-weight:600
+ background:var(--card2);font-weight:600;transition:0.3s
 }
+.action-btn:hover{background:var(--accent);color:#041217}
 .action-btn svg{width:18px;height:18px;fill:#fff}
 
 /* HERO */
 .hero{margin-top:18px;padding:28px;border-radius:18px;background:var(--card)}
 .hero h1{color:var(--accent);margin:0}
 .lead{color:var(--muted);margin-top:10px}
+.stars{color:#f5c542;font-size:18px;margin:8px 0}
 
-/* SECTION */
+/* SECTIONS */
 .section{margin-top:40px}
-.section h2{color:var(--accent)}
+.section h2{color:var(--accent);margin-bottom:16px}
 .card{background:var(--card);padding:24px;border-radius:18px}
-
-/* SERVICES */
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.service{background:var(--card2);padding:18px;border-radius:16px}
+.service{background:var(--card2);padding:18px;border-radius:16px;transition:0.3s}
+.service:hover{background:var(--accent);color:#041217}
 
 /* TESTIMONIALS */
 .test-track{
  background:var(--card);border-radius:18px;
- padding:30px;min-height:240px;
+ padding:30px;min-height:250px;
  display:flex;justify-content:center;align-items:center
 }
 .review{
@@ -81,7 +80,8 @@ header{
  transition:all .8s ease
 }
 .review.active{opacity:1;transform:none}
-.stars{color:#f5c542;font-size:18px;margin:8px 0}
+.review .stars{margin:6px 0;color:#f5c542;font-size:18px}
+.review p{margin-top:6px;line-height:1.5;}
 
 /* FORM */
 .form-card{
@@ -94,6 +94,7 @@ input,textarea{
  background:#0b242c;border:1px solid rgba(255,255,255,.08);
  color:#fff
 }
+button{margin-top:12px;padding:12px 18px;border-radius:10px;background:var(--accent);color:#041217;border:none;cursor:pointer}
 
 /* FOOTER */
 footer{text-align:center;margin:36px 0;color:var(--muted)}
@@ -105,6 +106,7 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
 /* RESPONSIVE */
 @media(max-width:768px){
  .action-btn span.text{display:none}
+ .services{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -112,6 +114,7 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
 <body>
 <div class="container">
 
+<!-- HEADER -->
 <header>
  <div class="brand">
   <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
@@ -133,12 +136,27 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero fade-up">
 <h1>Best Lawyer in Chandi, Hilsa & Nalanda</h1>
 <p class="lead">Professional legal services with honest advice and strong court representation.</p>
 <div class="stars">★★★★★ 4.9/5 (120 Reviews)</div>
 </section>
 
+<!-- SERVICES -->
+<section class="section fade-up">
+<h2>Our Legal Services</h2>
+<div class="services">
+ <div class="service">Criminal Law</div>
+ <div class="service">Civil Litigation</div>
+ <div class="service">Family Law</div>
+ <div class="service">Property & Land Disputes</div>
+ <div class="service">Legal Drafting</div>
+ <div class="service">Consultation & Advisory</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
 <section class="section fade-up">
 <h2>Client Reviews</h2>
 <div class="test-track">
@@ -146,17 +164,42 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
 </div>
 </section>
 
+<!-- CONTACT FORM -->
+<section class="section fade-up">
+<h2>Contact Advocate</h2>
+<div class="form-card">
+ <form>
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Phone" required>
+  <textarea placeholder="Your Message" rows="4" required></textarea>
+  <button type="submit">Send Message</button>
+ </form>
+</div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section class="section fade-up">
+<h2>Our Location</h2>
+<div class="card" style="height:300px;">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.947737755904!2d85.500!3d25.433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI2JzQzLjIiTiA4NcKwMzAnMjIuMiJF!5e0!3m2!1sen!2sin!4v1687639920000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
 © <span id="year"></span> Advocate Anil Kumar Purushotam
 </footer>
 
 </div>
 
+<!-- JS -->
 <script>
+// REVIEWS
 const reviews=[
-["Ramesh Kumar","Hilsa","Very professional advocate. Bail process was handled quickly with proper legal guidance and regular updates from start to end."],
+["Ramesh Kumar","Hilsa","Very professional advocate. Bail process handled quickly with proper guidance and updates from start to end."],
 ["Sunita Devi","Chandi","Property dispute resolved smoothly. Documentation and legal explanation were very clear and trustworthy."],
-["Amit Verma","Nalanda","Court procedure was explained clearly. Honest advice saved time and unnecessary expenses."],
+["Amit Verma","Nalanda","Court procedure explained clearly. Honest advice saved time and unnecessary expenses."],
 ["Pooja Singh","Bihar Sharif","Family matter handled respectfully. Calm approach and practical solution provided."],
 ["Sanjay Yadav","Chandi","Immediate response in emergency situation. Strong representation in court."],
 ["Rahul Kumar","Hilsa","Criminal case handled professionally with proper strategy and confidence."],
@@ -170,29 +213,27 @@ const reviews=[
 ["Ajay Singh","Nalanda","Professional behaviour and timely updates on case progress."],
 ["Kavita Devi","Chandi","Very reliable legal help. Highly recommended advocate."]
 ];
-
 let i=0,box=document.getElementById("reviewBox");
-function show(){
+function showReview(){
  box.classList.remove("active");
  setTimeout(()=>{
  let r=reviews[i];
- box.innerHTML=`<strong>${r[0]}</strong> — ${r[1]}
- <div class="stars">★★★★★</div>
- <p class="muted">${r[2]}</p>`;
+ box.innerHTML=`<strong>${r[0]}</strong> — ${r[1]}<div class="stars">★★★★★</div><p>${r[2]}</p>`;
  box.classList.add("active");
  i=(i+1)%reviews.length;
  },250);
 }
-show();setInterval(show,4200);
-</script>
+showReview();
+setInterval(showReview,4200);
 
-<script>
+// FADE UP ANIMATION
 const io=new IntersectionObserver(e=>{
  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"))
 },{threshold:.2});
 document.querySelectorAll(".fade-up").forEach(el=>io.observe(el));
+
+// FOOTER YEAR
 document.getElementById("year").innerText=new Date().getFullYear();
 </script>
-
 </body>
 </html>
