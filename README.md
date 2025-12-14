@@ -5,7 +5,7 @@ based in **Chandi, Nalanda, Bihar**.
 The website showcases his legal services, experience, and contact information.
 
 🔗 Live Website:  
-https://chandu582.github.io/Anilsir1-lawyer-website/
+https://advocateanilpurushottam.com
 
 📌 Optimized for Search Engines (SEO) with:
 - Meta tags  
