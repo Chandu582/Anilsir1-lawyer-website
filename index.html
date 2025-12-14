@@ -131,6 +131,16 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
 @media(max-width:768px){
  .action-btn b{display:none}
 }
+ /* REMOVE UNDERLINE FROM CALL & WHATSAPP BUTTON */
+.action-btn{
+  text-decoration: none !important;
+}
+
+.action-btn:hover,
+.action-btn:focus,
+.action-btn:active{
+  text-decoration: none !important;
+}
 </style>
 </head>
 
@@ -146,8 +156,22 @@ footer{text-align:center;margin:36px 0;color:var(--muted)}
   </div>
  </div>
  <div class="actions">
-  <a href="tel:+918757151951" class="action-btn"><span>📞</span><b>Call</b></a>
-  <a href="https://wa.me/918757151951" class="action-btn"><span>💬</span><b>WhatsApp</b></a>
+
+  <!-- CALL BUTTON -->
+  <a href="tel:+918757151951"
+     class="action-btn"
+     onclick="gtag('event','call_click',{event_category:'contact',event_label:'phone'});">
+    <span>📞</span><b>Call</b>
+  </a>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/918757151951"
+     class="action-btn"
+     target="_blank"
+     onclick="gtag('event','whatsapp_click',{event_category:'contact',event_label:'whatsapp'});">
+    <span>💬</span><b>WhatsApp</b>
+  </a>
+
  </div>
 </header>
 
