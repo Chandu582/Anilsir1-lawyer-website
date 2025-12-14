@@ -70,6 +70,17 @@ header{display:flex;justify-content:space-between;align-items:center;background:
 .hero h1{color:var(--accent);margin:0 0 10px 0;font-size:1.8rem}
 .lead{color:var(--muted);margin:0 auto 15px auto;max-width:600px}
 .stars{color:#f5c542;font-weight:bold;display:inline-block;background:rgba(245,197,66,0.1);padding:4px 12px;border-radius:20px}
+  /* ISSE CSS ME ADD KARO */
+.hero-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%; /* Gol (Round) photo ke liye */
+  border: 3px solid var(--accent); /* Golden Border */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+  
 
 /* SECTION */
 .section{margin-top:50px}
@@ -137,6 +148,7 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
 </header>
 
 <section class="hero fade-up">
+  <img src="profile.jpg" alt="Advocate Anil Kumar Purushottam" class="hero-img">
  <h1>Experienced Lawyer in Chandi, Hilsa & Nalanda</h1>
  <p class="lead">Trusted legal representation in Criminal, Civil, Family & Property matters with proven court experience.</p>
  <div class="stars">★★★★★ 4.4/5 (87 Verified Reviews)</div>
