@@ -216,12 +216,112 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
   src="https://maps.google.com/maps?q=Advocate+Anil+Kumar+Purushottam+Chandi+Nalanda&t=&z=15&ie=UTF8&iwloc=&output=embed">
  </iframe>
 </div>
-  
-  
+ 
+  <!-- footer start -->
+<footer class="site-footer">
+  <div class="footer-container">
 
-<footer>
- © <span id="year"></span> Advocate Anil Kumar Purushottam | All Rights Reserved.
+    <div class="footer-col">
+      <h3>Advocate Anil Kumar Purushottam</h3>
+      <p>
+        Lalganj, Chandi,<br>
+        Hilsa, Nalanda,<br>
+        Bihar – 803108, India
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>
+        📞 <a href="tel:+918757151951">+91 87571 51951</a><br>
+        
+        📧 <a href="mailto:advocateanilpurushottam@gmail.com">
+        advocateanilpurushottam@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Advocate+Anil+Kumar+Purushottam+Chandi+Nalanda" target="_blank">Google Business Profile</a><br>
+        
+        <a href="#" onclick="alert('Page coming soon!')">Privacy Policy</a><br>
+        <a href="#" onclick="alert('Page coming soon!')">Disclaimer</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year">2025</span> Advocate Anil Kumar Purushottam. All Rights Reserved.
+  </div>
 </footer>
+
+<style>
+.site-footer {
+  background: #041217;
+  color: #e7e7e7;
+  padding: 40px 15px 20px;
+  font-family: 'Inter', sans-serif;
+  margin-top: 50px; /* Thoda gap upar se */
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.footer-col h3 {
+  color: #d4aa45; /* Gold Color */
+  margin-bottom: 12px;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(212, 170, 69, 0.2);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #b0c4c7;
+}
+
+.site-footer a {
+  color: #e7e7e7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.site-footer a:hover {
+  color: #d4aa45;
+  padding-left: 5px; /* Hover effect */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #6a7c80;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 20px;
+}
+
+/* Mobile Alignment */
+@media (max-width: 600px) {
+  .site-footer {
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+  // Automatic Year Update
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+  <!-- footer end -->
 
 </div>
 
