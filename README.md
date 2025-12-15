@@ -1,4 +1,4 @@
-# Advocate Anil Kumar Purushotam – Official Website
+# Advocate Anil Kumar Purushothaman – Official Website
 
 This is the official portfolio website of **Advocate Anil Kumar Purushothaman**,  
 based in **Chandi, Nalanda, Bihar**.  
