@@ -326,26 +326,52 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
 </div>
 
 <script>
-// REVIEWS DATA
-const reviews=[
- ["Ramesh Kumar","Hilsa","Bahut hi badhiya wauqeel hain. Bail turant karwa di."],
- ["Sunita Devi","Chandi","Property ka vivad shanti se suljha diya. Thank you sir."],
- ["Amit Verma","Bihar Sharif","Court process ko ache se samjhate hain. Trustworthy lawyer."],
- ["Pooja Singh","Nalanda","Mere family case ko bahut respectfully handle kiya."]
+/* ===== PREMIUM TESTIMONIALS DATA ===== */
+const reviews = [
+ {name:"Ramesh Kumar", place:"Hilsa", rating:4.8, text:"Bahut hi badhiya vakeel hain. Bail process ko clearly samjhaya aur time par madad ki. Court ke chakkar kam lage aur kaam professional raha."},
+ {name:"Sunita Devi", place:"Chandi", rating:4.6, text:"Property dispute ka solution shanti aur legally sahi tareeke se nikala. Advocate sahib ka behaviour kaafi supportive aur respectful tha."},
+ {name:"Amit Verma", place:"Bihar Sharif", rating:4.7, text:"Court process ko ache se samjhate hain. Har step pe guidance milti rahi. Ek trustworthy aur experienced lawyer."},
+ {name:"Pooja Singh", place:"Nalanda", rating:4.9, text:"Family case ko bahut professionalism ke saath handle kiya. Fees transparent thi aur response fast raha."},
+ {name:"Rajeev Kumar", place:"Hilsa", rating:4.5, text:"Legal advice practical aur honest thi. Unnecessary cheezon me nahi fasaate. Highly recommended."},
+ {name:"Neha Kumari", place:"Chandi", rating:4.8, text:"Documentation aur agreement ka kaam smoothly ho gaya. Time par update milta raha."},
+ {name:"Sanjay Prasad", place:"Nalanda", rating:4.6, text:"Criminal matter me strong representation mila. Court me confidence aur clarity dikhi."},
+ {name:"Anil Sharma", place:"Bihar Sharif", rating:4.9, text:"Very professional advocate. Case ko seriously liya aur best possible solution diya."},
+ {name:"Kavita Devi", place:"Hilsa", rating:4.7, text:"Legal language ko simple shabdon me explain kiya. Behaviour polite aur supportive raha."},
+ {name:"Deepak Kumar", place:"Chandi", rating:4.8, text:"Overall experience kaafi achha raha. Legal help ke liye best advocate hain area me."}
 ];
-let i=0,box=document.getElementById("reviewBox");
-function show(){
+
+let index = 0;
+const box = document.getElementById("reviewBox");
+
+function renderStars(rating){
+ let full = Math.floor(rating);
+ let half = rating % 1 >= 0.5;
+ let stars = "";
+ for(let i=0;i<full;i++) stars += "★";
+ if(half) stars += "½";
+ return stars;
+}
+
+function showReview(){
  box.classList.remove("active");
  setTimeout(()=>{
-  let r=reviews[i];
-  box.innerHTML=`<div class="stars">★★★★★</div>
-  <p style="font-size:1.1rem;margin:10px 0">"${r[2]}"</p>
-  <strong>${r[0]}</strong> <span style="color:var(--muted)">— ${r[1]}</span>`;
-  box.classList.add("active");
-  i=(i+1)%reviews.length;
+   const r = reviews[index];
+   box.innerHTML = `
+     <div class="stars" style="font-size:1.2rem;color:#d4aa45">
+       ${renderStars(r.rating)} <span style="font-size:0.9rem;color:#9fb0b3">(${r.rating})</span>
+     </div>
+     <p style="font-size:1.05rem;margin:12px 0;">"${r.text}"</p>
+     <strong>${r.name}</strong>
+     <span style="color:var(--muted)"> — ${r.place}</span>
+   `;
+   box.classList.add("active");
+   index = (index + 1) % reviews.length;
  },300);
 }
-show();setInterval(show,5000);
+
+showReview();
+setInterval(showReview, 5000);
+</script>
 
 // ANIMATION OBSERVER
 const io=new IntersectionObserver(e=>{
