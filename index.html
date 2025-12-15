@@ -326,60 +326,92 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
 </div>
 
 <script>
-/* ===== PREMIUM TESTIMONIALS DATA ===== */
-const reviews = [
- {name:"Ramesh Kumar", place:"Hilsa", rating:4.8, text:"Bahut hi badhiya vakeel hain. Bail process ko clearly samjhaya aur time par madad ki. Court ke chakkar kam lage aur kaam professional raha."},
- {name:"Sunita Devi", place:"Chandi", rating:4.6, text:"Property dispute ka solution shanti aur legally sahi tareeke se nikala. Advocate sahib ka behaviour kaafi supportive aur respectful tha."},
- {name:"Amit Verma", place:"Bihar Sharif", rating:4.7, text:"Court process ko ache se samjhate hain. Har step pe guidance milti rahi. Ek trustworthy aur experienced lawyer."},
- {name:"Pooja Singh", place:"Nalanda", rating:4.9, text:"Family case ko bahut professionalism ke saath handle kiya. Fees transparent thi aur response fast raha."},
- {name:"Rajeev Kumar", place:"Hilsa", rating:4.5, text:"Legal advice practical aur honest thi. Unnecessary cheezon me nahi fasaate. Highly recommended."},
- {name:"Neha Kumari", place:"Chandi", rating:4.8, text:"Documentation aur agreement ka kaam smoothly ho gaya. Time par update milta raha."},
- {name:"Sanjay Prasad", place:"Nalanda", rating:4.6, text:"Criminal matter me strong representation mila. Court me confidence aur clarity dikhi."},
- {name:"Anil Sharma", place:"Bihar Sharif", rating:4.9, text:"Very professional advocate. Case ko seriously liya aur best possible solution diya."},
- {name:"Kavita Devi", place:"Hilsa", rating:4.7, text:"Legal language ko simple shabdon me explain kiya. Behaviour polite aur supportive raha."},
- {name:"Deepak Kumar", place:"Chandi", rating:4.8, text:"Overall experience kaafi achha raha. Legal help ke liye best advocate hain area me."}
-];
+  // === CLIENT REVIEWS DATA (Name, Location, Review, Rating, Date) ===
+  const reviews = [
+    ["Ramesh Kumar", "Hilsa", "Bail ka matter tha jo kaafi time se atka hua tha. Vakil sahab ne bahut mehnat karke 2 hafte mein bail karwa di. Main inka shukraguzaar hu.", "5.0", "12 Dec 2024"],
+    
+    ["Sunita Devi", "Chandi", "Humara zameen ka vivad chal raha tha padosi ke sath. Sir ne sahi salah di aur court mein humara paksh mazbooti se rakha.", "4.9", "05 Jan 2025"],
+    
+    ["Amit Verma", "Bihar Sharif", "Anil sir is very professional. Unhone mujhe jhoothe case se bachaya aur police station ke chakkar katne se bhi mukti dilayi.", "5.0", "28 Nov 2024"],
+    
+    ["Pooja Singh", "Nalanda", "Mere divorce case mein mujhe bahut darr lag raha tha, par sir ne mujhe himmat di. Maintenance ka amount bhi sahi dilwaya.", "4.8", "10 Feb 2025"],
+    
+    ["Md. Shamim", "Islampur", "Registry ke paper mein gadbadi thi. Sir ne turant notice bheja aur bina court gaye matter solve karwa diya. Fees bhi wajib hai.", "4.7", "15 Oct 2024"],
+    
+    ["Vikash Yadav", "Harnaut", "Mujhe laga tha mera career kharab ho jayega criminal case ki wajah se. Par sir ne Anticipatory Bail le li. Thank you sir.", "5.0", "02 Jan 2025"],
+    
+    ["Suresh Prasad", "Noorsarai", "Cheque bounce case mein maine umeed chhod di thi paise milne ki. Sir ne legal notice bheja aur party ne settlement kiya.", "4.6", "20 Sep 2024"],
+    
+    ["Anjali Kumari", "Chandi", "Domestic violence ke case mein sir ne meri bahut madad ki. Aaj main apne aur apne bache ke liye stand le paayi hu.", "4.9", "14 Dec 2024"],
+    
+    ["Pankaj Sinha", "Hilsa", "Best lawyer in Hilsa court. Unka baat karne ka tarika aur court mein present hone ka style bahut hi shandaar hai.", "4.8", "30 Nov 2024"],
+    
+    ["Rahul Paswan", "Nagarneusa", "Police mujhe pareshan kar rahi thi. Sir ne ek call kiya aur uske baad police ka rawayya badal gaya. Power hai inki awaaz mein.", "5.0", "18 Jan 2025"],
+    
+    ["Deepak Raj", "Bihar Sharif", "Property batware ko lekar bhaiyon mein jhagda tha. Sir ne court ke bahar hi baithkar samjhauta karwa diya.", "4.7", "22 Oct 2024"],
+    
+    ["Rajesh Singh", "Ekangarsarai", "Koi bhi legal advice chahiye ho to Anil sir se behtar koi nahi. Wo sach bolte hain, client ko andhere mein nahi rakhte.", "4.9", "01 Feb 2025"]
+  ];
 
-let index = 0;
-const box = document.getElementById("reviewBox");
+  // === STAR GENERATOR LOGIC (Half Star System) ===
+  function getStars(rating) {
+    let r = parseFloat(rating);
+    if (r >= 4.8) return "★★★★★";
+    if (r >= 4.3) return "★★★★½"; 
+    if (r >= 3.8) return "★★★★☆"; 
+    return "★★★☆☆"; 
+  }
 
-function renderStars(rating){
- let full = Math.floor(rating);
- let half = rating % 1 >= 0.5;
- let stars = "";
- for(let i=0;i<full;i++) stars += "★";
- if(half) stars += "½";
- return stars;
-}
+  let i = 0;
+  let box = document.getElementById("reviewBox");
 
-function showReview(){
- box.classList.remove("active");
- setTimeout(()=>{
-   const r = reviews[index];
-   box.innerHTML = `
-     <div class="stars" style="font-size:1.2rem;color:#d4aa45">
-       ${renderStars(r.rating)} <span style="font-size:0.9rem;color:#9fb0b3">(${r.rating})</span>
-     </div>
-     <p style="font-size:1.05rem;margin:12px 0;">"${r.text}"</p>
-     <strong>${r.name}</strong>
-     <span style="color:var(--muted)"> — ${r.place}</span>
-   `;
-   box.classList.add("active");
-   index = (index + 1) % reviews.length;
- },300);
-}
+  function show() {
+    box.classList.remove("active");
+    
+    setTimeout(() => {
+      let r = reviews[i];
+      let starIcons = getStars(r[3]); 
+      
+      // HTML Update (Date Added)
+      box.innerHTML = `
+        <div class="stars" style="color:#d4aa45; font-size:1.4rem; margin-bottom:12px;">
+           ${starIcons} <span style="font-size:0.8rem; color:#b0c4c7; font-weight:normal;">(${r[3]}/5)</span>
+        </div>
+        <p style="font-size:1.05rem; line-height:1.7; margin-bottom:15px; font-style:italic; color:#e7f2f3; min-height:80px;">
+          "${r[2]}"
+        </p>
+        <div>
+          <strong style="color:#d4aa45; text-transform:uppercase; letter-spacing:1px; font-size:0.95rem;">${r[0]}</strong> 
+          <span style="color:#9db0b3; font-size:0.85rem;"> — ${r[1]}</span>
+          <span style="color:#6a7c80; font-size:0.8rem; margin-left:8px;">• ${r[4]}</span>
+        </div>`;
+      
+      box.classList.add("active");
+      
+      i++;
+      if (i >= reviews.length) {
+        i = 0; 
+      }
+    }, 500); 
+  }
 
-showReview();
-setInterval(showReview, 5000);
+  show();
+  setInterval(show, 5000);
+
+  // --- ANIMATION CODE ---
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".fade-up");
+  hiddenElements.forEach((el) => io.observe(el));
+  
+  document.getElementById("year").innerText = new Date().getFullYear();
 </script>
-
-// ANIMATION OBSERVER
-const io=new IntersectionObserver(e=>{
- e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"))
-},{threshold:.1});
-document.querySelectorAll(".fade-up").forEach(el=>io.observe(el));
-document.getElementById("year").innerText=new Date().getFullYear();
-</script>
-
+  
 </body>
 </html>
