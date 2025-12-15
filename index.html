@@ -326,13 +326,18 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
 </div>
 
 <script>
-  // === CLIENT REVIEWS DATA ===
+  // === FINAL REVIEWS DATA (Mixed Ratings to show effect) ===
   const reviews = [
-    // Maine ratings thodi vary ki hain taki tum "Half Star" ka effect dekh sako (e.g. 4.5)
-    ["Ramesh Kumar", "Hilsa", "Bail ka matter tha jo kaafi time se atka hua tha. Vakil sahab ne bahut mehnat karke 2 hafte mein bail karwa di. Main inka shukraguzaar hu.", "5.0", "12 Dec 2024"],
-    ["Sunita Devi", "Chandi", "Humara zameen ka vivad chal raha tha padosi ke sath. Sir ne sahi salah di aur court mein humara paksh mazbooti se rakha.", "4.5", "05 Jan 2025"], 
-    ["Amit Verma", "Bihar Sharif", "Anil sir is very professional. Unhone mujhe jhoothe case se bachaya aur police station ke chakkar katne se bhi mukti dilayi.", "4.0", "28 Nov 2024"],
-    ["Pooja Singh", "Nalanda", "Mere divorce case mein mujhe bahut darr lag raha tha, par sir ne mujhe himmat di. Maintenance ka amount bhi sahi dilwaya.", "4.8", "10 Feb 2025"],
+    // Rating 4.2 taaki aadha star saaf dikhe
+    ["Ramesh Kumar", "Hilsa", "Bail ka matter tha jo kaafi time se atka hua tha. Vakil sahab ne bahut mehnat karke 2 hafte mein bail karwa di. Shukriya sir.", "4.2", "12 Dec 2024"],
+    
+    // Rating 4.8
+    ["Sunita Devi", "Chandi", "Humara zameen ka vivad chal raha tha padosi ke sath. Sir ne sahi salah di aur court mein humara paksh mazbooti se rakha.", "4.8", "05 Jan 2025"],
+    
+    // Rating 4.5 (Perfect Half)
+    ["Amit Verma", "Bihar Sharif", "Anil sir is very professional. Unhone mujhe jhoothe case se bachaya aur police station ke chakkar katne se bhi mukti dilayi.", "4.5", "28 Nov 2024"],
+    
+    ["Pooja Singh", "Nalanda", "Mere divorce case mein mujhe bahut darr lag raha tha, par sir ne mujhe himmat di. Maintenance ka amount bhi sahi dilwaya.", "4.9", "10 Feb 2025"],
     ["Md. Shamim", "Islampur", "Registry ke paper mein gadbadi thi. Sir ne turant notice bheja aur bina court gaye matter solve karwa diya. Fees bhi wajib hai.", "4.7", "15 Oct 2024"],
     ["Vikash Yadav", "Harnaut", "Mujhe laga tha mera career kharab ho jayega criminal case ki wajah se. Par sir ne Anticipatory Bail le li. Thank you sir.", "5.0", "02 Jan 2025"],
     ["Suresh Prasad", "Noorsarai", "Cheque bounce case mein maine umeed chhod di thi paise milne ki. Sir ne legal notice bheja aur party ne settlement kiya.", "4.6", "20 Sep 2024"],
@@ -345,46 +350,63 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
 
   let i = 0;
   let box = document.getElementById("reviewBox");
-  
-  // === PROBLEM SOLVED: FIXED HEIGHT ===
-  // Ab box hamesha 300px ka rahega. Content kam ho ya jyada, box nahi hilega.
-  box.style.height = "300px"; 
-  box.style.overflow = "hidden"; // Text bahar na nikle
+
+  // === FIX 1: BOX LOCK (PATHAR KI TARAH) ===
+  // Height 320px fix kar di hai. Ab ye na hilega na pichkega.
+  box.style.height = "300px";
+  box.style.overflow = "hidden"; 
   box.style.display = "flex";
   box.style.flexDirection = "column";
   box.style.justifyContent = "center";
-  box.style.transition = "opacity 0.5s ease-in-out"; // Smooth Fade
+  
+  // Transition sirf opacity par hoga, height par nahi
+  box.style.transition = "opacity 0.5s ease"; 
 
+  // === FIX 2: GRADIENT STARS (MODERN WAY) ===
+  // Ye function har star ko alag-alag color karega
   function getStarHTML(rating) {
-    const pct = (rating / 5) * 100;
+    let output = '<div style="font-size: 1.6rem; letter-spacing: 3px; display: inline-block;">';
     
-    // === STAR FIX ===
-    // Width fixed (140px) aur Position Absolute se stars ek-dusre ke upar perfectly baithenge
-    return `
-      <div style="position: relative; display: inline-block; width: 140px; height: 30px; font-size: 24px; line-height: 30px;">
-        <div style="color: #4a5d61; position: absolute; top:0; left:0; width: 100%; white-space: nowrap; overflow: hidden;">★★★★★</div>
-        
-        <div style="color: #d4aa45; position: absolute; top:0; left:0; width: ${pct}%; white-space: nowrap; overflow: hidden;">★★★★★</div>
-      </div>
-    `;
+    for (let star = 1; star <= 5; star++) {
+      let percentage = 0;
+      
+      if (rating >= star) {
+        percentage = 100; // Poora star yellow
+      } else if (rating > star - 1) {
+        percentage = (rating - (star - 1)) * 100; // Aadha/Tudka star
+      } else {
+        percentage = 0; // Gray star
+      }
+      
+      // CSS Gradient Magic: Star ke andar rang bharna
+      output += `<span style="
+        background: linear-gradient(90deg, #d4aa45 ${percentage}%, #4a5d61 ${percentage}%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      ">★</span>`;
+    }
+    
+    output += '</div>';
+    return output;
   }
 
   function show() {
-    // 1. Pehle purana text gayab karo (Fade Out)
+    // 1. Fade Out (Content gayab)
     box.style.opacity = "0";
     
     setTimeout(() => {
       let r = reviews[i];
       let starVisuals = getStarHTML(r[3]); 
       
-      // 2. HTML update karo
+      // 2. Content Change
       box.innerHTML = `
-        <div style="margin-bottom:15px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <div style="margin-bottom:12px; display: flex; align-items: center; justify-content: center; gap: 8px;">
            ${starVisuals} 
-           <span style="font-size:0.9rem; color:#b0c4c7; font-weight:bold; margin-top: 2px;">(${r[3]})</span>
+           <span style="font-size:0.9rem; color:#b0c4c7; font-weight:bold; padding-top:4px;">(${r[3]})</span>
         </div>
         
-        <p style="font-size:1.1rem; line-height:1.6; margin-bottom:20px; font-style:italic; color:#e7f2f3; padding: 0 10px; min-height: 80px; display: flex; align-items: center; justify-content: center;">
+        <p style="font-size:1.1rem; line-height:1.6; margin-bottom:20px; font-style:italic; color:#e7f2f3; padding: 0 10px; min-height:85px; display:flex; align-items:center; justify-content:center;">
           "${r[2]}"
         </p>
         
@@ -394,20 +416,20 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
           <div style="color:#6a7c80; font-size:0.8rem; margin-top:5px;">• ${r[4]} •</div>
         </div>`;
       
-      // 3. Naya text dikhao (Fade In)
+      // 3. Fade In (Content wapas)
       box.style.opacity = "1";
       
       i++;
       if (i >= reviews.length) {
         i = 0; 
       }
-    }, 500); // 0.5 second ka fade time
+    }, 500); 
   }
 
   show();
   setInterval(show, 5000);
 
-  // --- ANIMATION OBSERVER (Zaroori hai) ---
+  // --- ANIMATION OBSERVER ---
   const io = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
