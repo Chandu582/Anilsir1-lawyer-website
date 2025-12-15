@@ -345,23 +345,25 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
   let i = 0;
   let box = document.getElementById("reviewBox");
   
-  // FIX: Box ko hilne se rokne ke liye MIN-HEIGHT set ki hai
-  // Isse box ka size fix rahega bhale hi review chota ho
-  box.style.minHeight = "260px"; 
+  // FIX 1: JUMPING ROKNE KE LIYE FIXED HEIGHT
+  // Ab box ka size hamesha 300px rahega, chahe content kam ho ya zyada
+  box.style.height = "300px"; 
   box.style.display = "flex";
   box.style.flexDirection = "column";
-  box.style.justifyContent = "center";
+  box.style.justifyContent = "center"; // Content beech me rahega
 
   function getStarHTML(rating) {
-    // Percentage calculate karna (e.g. 4.7 => 94%)
+    // Percentage calculate karna (e.g. 4.8 => 96%)
     const pct = (rating / 5) * 100;
     
-    // Yahan hum 2 layer bana rahe hain:
-    // 1. Peeche Gray Stars (Empty)
-    // 2. Upar Gold Stars (Filled) jo width ke hisab se kat jayenge
+    // FIX 2: PERFECT STAR FILLING
+    // Humne 'white-space: nowrap' lagaya hai taki stars tute nahi
     return `
-      <div style="position: relative; display: inline-block; font-size: 1.4rem; letter-spacing: 2px;">
-        <div style="color: #4a5d61;">★★★★★</div> <div style="color: #d4aa45; position: absolute; top: 0; left: 0; overflow: hidden; width: ${pct}%;">★★★★★</div> </div>
+      <div style="position: relative; display: inline-block; font-size: 1.5rem; letter-spacing: 3px; line-height: 1;">
+        <div style="color: #364144; white-space: nowrap;">★★★★★</div> 
+        
+        <div style="color: #d4aa45; position: absolute; top: 0; left: 0; overflow: hidden; width: ${pct}%; white-space: nowrap;">★★★★★</div>
+      </div>
     `;
   }
 
@@ -373,19 +375,19 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
       let starVisuals = getStarHTML(r[3]); 
       
       box.innerHTML = `
-        <div style="margin-bottom:12px;">
+        <div style="margin-bottom:15px;">
            ${starVisuals} 
-           <span style="font-size:0.85rem; color:#b0c4c7; margin-left:8px; vertical-align: middle;">(${r[3]})</span>
+           <span style="font-size:0.9rem; color:#b0c4c7; margin-left:10px; vertical-align: middle; font-weight:bold;">${r[3]}</span>
         </div>
         
-        <p style="font-size:1.05rem; line-height:1.7; margin-bottom:20px; font-style:italic; color:#e7f2f3; min-height:90px;">
+        <p style="font-size:1.1rem; line-height:1.6; margin-bottom:20px; font-style:italic; color:#e7f2f3; padding: 0 10px;">
           "${r[2]}"
         </p>
         
         <div>
-          <strong style="color:#d4aa45; text-transform:uppercase; letter-spacing:1px; font-size:0.95rem;">${r[0]}</strong> 
-          <span style="color:#9db0b3; font-size:0.85rem;"> — ${r[1]}</span>
-          <span style="color:#6a7c80; font-size:0.8rem; margin-left:8px; display:inline-block;">• ${r[4]}</span>
+          <strong style="color:#d4aa45; text-transform:uppercase; letter-spacing:1px; font-size:1rem;">${r[0]}</strong> 
+          <span style="color:#9db0b3; font-size:0.9rem;"> — ${r[1]}</span>
+          <div style="color:#6a7c80; font-size:0.8rem; margin-top:4px;">${r[4]}</div>
         </div>`;
       
       box.classList.add("active");
@@ -400,7 +402,7 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
   show();
   setInterval(show, 5000);
 
-  // --- ANIMATION OBSERVER (Zaroori hai) ---
+  // --- ANIMATION OBSERVER ---
   const io = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -415,6 +417,7 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
   // Year Update
   document.getElementById("year").innerText = new Date().getFullYear();
 </script>
+  
   
   
 </body>
