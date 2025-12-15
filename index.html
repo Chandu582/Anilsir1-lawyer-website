@@ -151,7 +151,46 @@ footer{text-align:center;margin:50px 0 30px;color:var(--muted);font-size:0.9rem}
   <img src="profile.jpg" alt="Advocate Anil Kumar Purushottam" class="hero-img">
  <h1>Experienced Lawyer in Chandi, Hilsa & Nalanda</h1>
  <p class="lead">Trusted legal representation in Criminal, Civil, Family & Property matters with proven court experience.</p>
- <div class="stars">★★★★★ 4.4/5 (87 Verified Reviews)</div>
+ <!-- Profile ke pass star ke liye -->
+  <div id="auto-profile-rating" style="background: rgba(212, 170, 69, 0.1); padding: 8px 16px; border-radius: 20px; display: inline-block; margin-top: 5px;">
+    </div>
+
+<script>
+(function() {
+    // 👇 SIRF YAHAN RATING CHANGE KARO (Change Number Here) 👇
+    const myRating = 4.4; 
+    const reviewCount = "87 Verified Reviews";
+    // 👆 Iske neeche kuch mat chedhna 👆
+
+    const container = document.getElementById("auto-profile-rating");
+    let html = '<span style="font-size: 1.2rem; letter-spacing: 2px; vertical-align: middle;">';
+
+    // Loop jo khud decide karega ki star kitna bharna hai
+    for (let i = 1; i <= 5; i++) {
+        let percent = 0;
+        if (myRating >= i) {
+            percent = 100; // Poora Star
+        } else if (myRating > i - 1) {
+            percent = (myRating - (i - 1)) * 100; // Aadha/Tukda Star
+        }
+        
+        // Gradient Star Code
+        html += `<span style="
+            background: linear-gradient(90deg, #d4aa45 ${percent}%, #4a5d61 ${percent}%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        ">★</span>`;
+    }
+
+    html += `</span>
+    <span style="color: #d4aa45; font-weight: bold; margin-left: 8px; font-size: 1rem;">${myRating}/5</span>
+    <span style="color: #9db0b3; font-size: 0.9rem; margin-left: 5px;">(${reviewCount})</span>`;
+
+    container.innerHTML = html;
+})();
+</script>
+  <!-- ynha pe khtm hota h profile pe star ke liye -->
 </section>
 
 <section class="section fade-up">
